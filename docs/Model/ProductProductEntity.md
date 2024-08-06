@@ -1,7 +1,7 @@
 # # ProductProductEntity
 
 
-## Properties
+## Properties 
 
 
 Name | Type | Description | Notes
@@ -24,8 +24,10 @@ Name | Type | Description | Notes
 **media_gallery**| [**\GeminiCommerce\Product\Model\ProductMediaGallery**](ProductMediaGallery.md) |   | [optional]
 **max_saleable_quantity**| **int** |   | [optional]
 **assets**| [**\GeminiCommerce\Product\Model\ProductAssets**](ProductAssets.md) |   | [optional]
+**in_review**| **bool** |   | [optional]
 **created_at**| **string** |   | [optional]
 **updated_at**| **string** |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
+

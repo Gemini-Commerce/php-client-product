@@ -1,7 +1,7 @@
 # # ProductUpdateProductRequest
 
 
-## Properties
+## Properties 
 
 
 Name | Type | Description | Notes
@@ -15,6 +15,8 @@ Name | Type | Description | Notes
 **media_variant_attributes**| **string[]** |   | [optional]
 **attributes**| [**array<string,\GeminiCommerce\Product\Model\ProtobufAny>**](ProtobufAny.md) |   | [optional]
 **variants**| [**array<string,\GeminiCommerce\Product\Model\ProductProductVariant>**](ProductProductVariant.md) |   | [optional]
+**in_review**| **bool** |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)
+

@@ -12,7 +12,7 @@
 /**
  * Product Service
  *
- * API for managing products
+ * Introducing our revolutionary Product Management Service! Designed to streamline your product inventory and elevate customer experiences, our cutting-edge protobuf service is a game-changer in the world of efficient product management.  With our service, you can effortlessly create new products, allowing you to quickly bring your ideas to life and expand your catalog. Retrieve product information in a snap, providing accurate and personalized details to your customers based on their specific needs and preferences.  Stay ahead of the competition by easily updating product information, ensuring your catalog is always up-to-date and optimized. Seamlessly remove products from your inventory when needed, maintaining a clean and relevant product selection.  Enhance the visual appeal of your products with our advanced media gallery functionalities. Effortlessly add and update captivating images and videos to showcase your products in the best possible light, engaging your customers and driving conversions.  Personalization is key in today's market, and our service enables you to offer unique options to your customers. Easily create and manage lists of customizable options for your products, providing flexibility and tailoring to individual preferences.  Attributes play a vital role in defining products, and our service empowers you to effectively manage them. From bulk attribute creation to listing and retrieving attribute options, our service ensures your product information is rich and comprehensive.  Our service extends its capabilities to entity management, allowing you to effortlessly handle different entities and create customized options lists associated with them. This provides further flexibility and customization options for your product offerings.  When it comes to bulk updates, our service has you covered. Effortlessly update multiple products simultaneously, saving you time and streamlining your operations.  Finding specific products and variants is a breeze with our service. Quickly locate products based on their unique stock keeping unit (SKU) values, ensuring efficient inventory management and smooth order fulfillment.  Experience a new level of efficiency and productivity with our Product Management Service. Unlock the full potential of streamlined product management and empower your business to thrive in today's competitive market. Try our service today and elevate your product management to new heights!
  *
  * The version of the OpenAPI document: v1
  * Contact: info@gemini-commerce.com
@@ -72,40 +72,91 @@ class ProductApi
 
     /** @var string[] $contentTypes **/
     public const contentTypes = [
-        'productAddMediaGalleryEntry' => [
+        'addMediaGalleryEntry' => [
             'application/json',
         ],
-        'productBulkAddAssetsEntries' => [
+        'bulkAddAssetsEntries' => [
+            'application/json',
+        ],
+        'bulkDeleteProducts' => [
+            'application/json',
+        ],
+        'bulkEnhanceProductDataWithAI' => [
+            'application/json',
+        ],
+        'bulkRemoveAssetsEntries' => [
+            'application/json',
+        ],
+        'bulkUpdateAssetsEntries' => [
+            'application/json',
+        ],
+        'bulkUpdateV2' => [
+            'application/json',
+        ],
+        'createAttributeOptions' => [
+            'application/json',
+        ],
+        'createEntity' => [
+            'application/json',
+        ],
+        'createOptionsList' => [
+            'application/json',
+        ],
+        'createProductWithAI' => [
+            'application/json',
+        ],
+        'getAttributeOption' => [
+            'application/json',
+        ],
+        'getAttributeOptions' => [
+            'application/json',
+        ],
+        'getEntity' => [
+            'application/json',
+        ],
+        'getOptionsList' => [
+            'application/json',
+        ],
+        'getProduct' => [
+            'application/json',
+        ],
+        'getProductByCode' => [
+            'application/json',
+        ],
+        'getProductByUrlKey' => [
+            'application/json',
+        ],
+        'getProductDataInReview' => [
+            'application/json',
+        ],
+        'listAttributeOptions' => [
+            'application/json',
+        ],
+        'listEntities' => [
+            'application/json',
+        ],
+        'listOptionsLists' => [
+            'application/json',
+        ],
+        'listProducts' => [
+            'application/json',
+        ],
+        'listProductsByIds' => [
+            'application/json',
+        ],
+        'listProductsBySku' => [
+            'application/json',
+        ],
+        'listVariantsBySku' => [
             'application/json',
         ],
         'productBulkCreateAttribute' => [
             'application/json',
         ],
-        'productBulkDeleteProducts' => [
-            'application/json',
-        ],
-        'productBulkRemoveAssetsEntries' => [
-            'application/json',
-        ],
         'productBulkUpdate' => [
             'application/json',
         ],
-        'productBulkUpdateAssetsEntries' => [
-            'application/json',
-        ],
-        'productBulkUpdateV2' => [
-            'application/json',
-        ],
         'productCreateAttributeGroup' => [
-            'application/json',
-        ],
-        'productCreateAttributeOptions' => [
-            'application/json',
-        ],
-        'productCreateEntity' => [
-            'application/json',
-        ],
-        'productCreateOptionsList' => [
             'application/json',
         ],
         'productCreateProduct' => [
@@ -126,52 +177,7 @@ class ProductApi
         'productGetAttributeGroup' => [
             'application/json',
         ],
-        'productGetAttributeOption' => [
-            'application/json',
-        ],
-        'productGetAttributeOptions' => [
-            'application/json',
-        ],
-        'productGetEntity' => [
-            'application/json',
-        ],
-        'productGetOptionsList' => [
-            'application/json',
-        ],
-        'productGetProduct' => [
-            'application/json',
-        ],
-        'productGetProductByCode' => [
-            'application/json',
-        ],
-        'productGetProductByUrlKey' => [
-            'application/json',
-        ],
         'productListAttributeGroups' => [
-            'application/json',
-        ],
-        'productListAttributeOptions' => [
-            'application/json',
-        ],
-        'productListEntities' => [
-            'application/json',
-        ],
-        'productListOptionsLists' => [
-            'application/json',
-        ],
-        'productListProducts' => [
-            'application/json',
-        ],
-        'productListProductsByIds' => [
-            'application/json',
-        ],
-        'productListProductsBySku' => [
-            'application/json',
-        ],
-        'productListVariantsBySku' => [
-            'application/json',
-        ],
-        'productRemoveMediaGalleryEntry' => [
             'application/json',
         ],
         'productUpdateAttribute' => [
@@ -180,19 +186,31 @@ class ProductApi
         'productUpdateAttributeGroup' => [
             'application/json',
         ],
-        'productUpdateAttributeOptions' => [
-            'application/json',
-        ],
-        'productUpdateMediaGalleryEntry' => [
-            'application/json',
-        ],
-        'productUpdateOptionsList' => [
-            'application/json',
-        ],
         'productUpdateProduct' => [
             'application/json',
         ],
         'productUpdateProductV2' => [
+            'application/json',
+        ],
+        'removeMediaGalleryEntry' => [
+            'application/json',
+        ],
+        'updateAttributeOptions' => [
+            'application/json',
+        ],
+        'updateDataToBeReviewed' => [
+            'application/json',
+        ],
+        'updateDataToBeReviewed_0' => [
+            'application/json',
+        ],
+        'updateMediaGalleryEntry' => [
+            'application/json',
+        ],
+        'updateOptionsList' => [
+            'application/json',
+        ],
+        'updateProductWithAI' => [
             'application/json',
         ],
     ];
@@ -244,34 +262,38 @@ class ProductApi
     }
 
     /**
-     * Operation productAddMediaGalleryEntry
+     * Operation addMediaGalleryEntry
+     *
+     * Add Media Gallery Entry
      *
      * @param  \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productAddMediaGalleryEntry'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMediaGalleryEntry'] to see the possible values for this operation
      *
      * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse|\GeminiCommerce\Product\Model\RpcStatus
+     * @return \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
      */
-    public function productAddMediaGalleryEntry($body, string $contentType = self::contentTypes['productAddMediaGalleryEntry'][0])
+    public function addMediaGalleryEntry($body, string $contentType = self::contentTypes['addMediaGalleryEntry'][0])
     {
-        list($response) = $this->productAddMediaGalleryEntryWithHttpInfo($body, $contentType);
+        list($response) = $this->addMediaGalleryEntryWithHttpInfo($body, $contentType);
         return $response;
     }
 
     /**
-     * Operation productAddMediaGalleryEntryWithHttpInfo
+     * Operation addMediaGalleryEntryWithHttpInfo
+     *
+     * Add Media Gallery Entry
      *
      * @param  \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productAddMediaGalleryEntry'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMediaGalleryEntry'] to see the possible values for this operation
      *
      * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function productAddMediaGalleryEntryWithHttpInfo($body, string $contentType = self::contentTypes['productAddMediaGalleryEntry'][0])
+    public function addMediaGalleryEntryWithHttpInfo($body, string $contentType = self::contentTypes['addMediaGalleryEntry'][0])
     {
-        $request = $this->productAddMediaGalleryEntryRequest($body, $contentType);
+        $request = $this->addMediaGalleryEntryRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -333,6 +355,60 @@ class ProductApi
 
                     return [
                         ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -403,6 +479,22 @@ class ProductApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -417,17 +509,19 @@ class ProductApi
     }
 
     /**
-     * Operation productAddMediaGalleryEntryAsync
+     * Operation addMediaGalleryEntryAsync
+     *
+     * Add Media Gallery Entry
      *
      * @param  \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productAddMediaGalleryEntry'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMediaGalleryEntry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function productAddMediaGalleryEntryAsync($body, string $contentType = self::contentTypes['productAddMediaGalleryEntry'][0])
+    public function addMediaGalleryEntryAsync($body, string $contentType = self::contentTypes['addMediaGalleryEntry'][0])
     {
-        return $this->productAddMediaGalleryEntryAsyncWithHttpInfo($body, $contentType)
+        return $this->addMediaGalleryEntryAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -436,18 +530,20 @@ class ProductApi
     }
 
     /**
-     * Operation productAddMediaGalleryEntryAsyncWithHttpInfo
+     * Operation addMediaGalleryEntryAsyncWithHttpInfo
+     *
+     * Add Media Gallery Entry
      *
      * @param  \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productAddMediaGalleryEntry'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMediaGalleryEntry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function productAddMediaGalleryEntryAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productAddMediaGalleryEntry'][0])
+    public function addMediaGalleryEntryAsyncWithHttpInfo($body, string $contentType = self::contentTypes['addMediaGalleryEntry'][0])
     {
         $returnType = '\GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse';
-        $request = $this->productAddMediaGalleryEntryRequest($body, $contentType);
+        $request = $this->addMediaGalleryEntryRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -486,21 +582,21 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'productAddMediaGalleryEntry'
+     * Create request for operation 'addMediaGalleryEntry'
      *
      * @param  \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productAddMediaGalleryEntry'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['addMediaGalleryEntry'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function productAddMediaGalleryEntryRequest($body, string $contentType = self::contentTypes['productAddMediaGalleryEntry'][0])
+    public function addMediaGalleryEntryRequest($body, string $contentType = self::contentTypes['addMediaGalleryEntry'][0])
     {
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productAddMediaGalleryEntry'
+                'Missing the required parameter $body when calling addMediaGalleryEntry'
             );
         }
 
@@ -554,6 +650,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -577,38 +678,38 @@ class ProductApi
     }
 
     /**
-     * Operation productBulkAddAssetsEntries
+     * Operation bulkAddAssetsEntries
      *
-     * Assets endpoints
+     * Bulk Add Assets Entries
      *
      * @param  \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkAddAssetsEntries'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkAddAssetsEntries'] to see the possible values for this operation
      *
      * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus
+     * @return \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
      */
-    public function productBulkAddAssetsEntries($body, string $contentType = self::contentTypes['productBulkAddAssetsEntries'][0])
+    public function bulkAddAssetsEntries($body, string $contentType = self::contentTypes['bulkAddAssetsEntries'][0])
     {
-        list($response) = $this->productBulkAddAssetsEntriesWithHttpInfo($body, $contentType);
+        list($response) = $this->bulkAddAssetsEntriesWithHttpInfo($body, $contentType);
         return $response;
     }
 
     /**
-     * Operation productBulkAddAssetsEntriesWithHttpInfo
+     * Operation bulkAddAssetsEntriesWithHttpInfo
      *
-     * Assets endpoints
+     * Bulk Add Assets Entries
      *
      * @param  \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkAddAssetsEntries'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkAddAssetsEntries'] to see the possible values for this operation
      *
      * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
      * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     * @return array of \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
      */
-    public function productBulkAddAssetsEntriesWithHttpInfo($body, string $contentType = self::contentTypes['productBulkAddAssetsEntries'][0])
+    public function bulkAddAssetsEntriesWithHttpInfo($body, string $contentType = self::contentTypes['bulkAddAssetsEntries'][0])
     {
-        $request = $this->productBulkAddAssetsEntriesRequest($body, $contentType);
+        $request = $this->bulkAddAssetsEntriesRequest($body, $contentType);
 
         try {
             $options = $this->createHttpClientOption();
@@ -670,6 +771,60 @@ class ProductApi
 
                     return [
                         ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
                         $response->getStatusCode(),
                         $response->getHeaders()
                     ];
@@ -740,6 +895,22 @@ class ProductApi
                     );
                     $e->setResponseObject($data);
                     break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
                 default:
                     $data = ObjectSerializer::deserialize(
                         $e->getResponseBody(),
@@ -754,19 +925,19 @@ class ProductApi
     }
 
     /**
-     * Operation productBulkAddAssetsEntriesAsync
+     * Operation bulkAddAssetsEntriesAsync
      *
-     * Assets endpoints
+     * Bulk Add Assets Entries
      *
      * @param  \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkAddAssetsEntries'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkAddAssetsEntries'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function productBulkAddAssetsEntriesAsync($body, string $contentType = self::contentTypes['productBulkAddAssetsEntries'][0])
+    public function bulkAddAssetsEntriesAsync($body, string $contentType = self::contentTypes['bulkAddAssetsEntries'][0])
     {
-        return $this->productBulkAddAssetsEntriesAsyncWithHttpInfo($body, $contentType)
+        return $this->bulkAddAssetsEntriesAsyncWithHttpInfo($body, $contentType)
             ->then(
                 function ($response) {
                     return $response[0];
@@ -775,20 +946,20 @@ class ProductApi
     }
 
     /**
-     * Operation productBulkAddAssetsEntriesAsyncWithHttpInfo
+     * Operation bulkAddAssetsEntriesAsyncWithHttpInfo
      *
-     * Assets endpoints
+     * Bulk Add Assets Entries
      *
      * @param  \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkAddAssetsEntries'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkAddAssetsEntries'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Promise\PromiseInterface
      */
-    public function productBulkAddAssetsEntriesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productBulkAddAssetsEntries'][0])
+    public function bulkAddAssetsEntriesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bulkAddAssetsEntries'][0])
     {
         $returnType = '\GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse';
-        $request = $this->productBulkAddAssetsEntriesRequest($body, $contentType);
+        $request = $this->bulkAddAssetsEntriesRequest($body, $contentType);
 
         return $this->client
             ->sendAsync($request, $this->createHttpClientOption())
@@ -827,21 +998,21 @@ class ProductApi
     }
 
     /**
-     * Create request for operation 'productBulkAddAssetsEntries'
+     * Create request for operation 'bulkAddAssetsEntries'
      *
      * @param  \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkAddAssetsEntries'] to see the possible values for this operation
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkAddAssetsEntries'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
      * @return \GuzzleHttp\Psr7\Request
      */
-    public function productBulkAddAssetsEntriesRequest($body, string $contentType = self::contentTypes['productBulkAddAssetsEntries'][0])
+    public function bulkAddAssetsEntriesRequest($body, string $contentType = self::contentTypes['bulkAddAssetsEntries'][0])
     {
 
         // verify the required parameter 'body' is set
         if ($body === null || (is_array($body) && count($body) === 0)) {
             throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productBulkAddAssetsEntries'
+                'Missing the required parameter $body when calling bulkAddAssetsEntries'
             );
         }
 
@@ -895,6 +1066,9960 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation bulkDeleteProducts
+     *
+     * Bulk Delete Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteProducts'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function bulkDeleteProducts($body, string $contentType = self::contentTypes['bulkDeleteProducts'][0])
+    {
+        list($response) = $this->bulkDeleteProductsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation bulkDeleteProductsWithHttpInfo
+     *
+     * Bulk Delete Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteProducts'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bulkDeleteProductsWithHttpInfo($body, string $contentType = self::contentTypes['bulkDeleteProducts'][0])
+    {
+        $request = $this->bulkDeleteProductsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('object' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('object' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'object', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'object';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation bulkDeleteProductsAsync
+     *
+     * Bulk Delete Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteProducts'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkDeleteProductsAsync($body, string $contentType = self::contentTypes['bulkDeleteProducts'][0])
+    {
+        return $this->bulkDeleteProductsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation bulkDeleteProductsAsyncWithHttpInfo
+     *
+     * Bulk Delete Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteProducts'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkDeleteProductsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bulkDeleteProducts'][0])
+    {
+        $returnType = 'object';
+        $request = $this->bulkDeleteProductsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'bulkDeleteProducts'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkDeleteProducts'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function bulkDeleteProductsRequest($body, string $contentType = self::contentTypes['bulkDeleteProducts'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling bulkDeleteProducts'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/BulkDeleteProducts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation bulkEnhanceProductDataWithAI
+     *
+     * Bulk Enhance Product Data With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkEnhanceProductDataWithAI'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function bulkEnhanceProductDataWithAI($body, string $contentType = self::contentTypes['bulkEnhanceProductDataWithAI'][0])
+    {
+        list($response) = $this->bulkEnhanceProductDataWithAIWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation bulkEnhanceProductDataWithAIWithHttpInfo
+     *
+     * Bulk Enhance Product Data With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkEnhanceProductDataWithAI'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bulkEnhanceProductDataWithAIWithHttpInfo($body, string $contentType = self::contentTypes['bulkEnhanceProductDataWithAI'][0])
+    {
+        $request = $this->bulkEnhanceProductDataWithAIRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('object' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('object' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'object', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'object';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation bulkEnhanceProductDataWithAIAsync
+     *
+     * Bulk Enhance Product Data With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkEnhanceProductDataWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkEnhanceProductDataWithAIAsync($body, string $contentType = self::contentTypes['bulkEnhanceProductDataWithAI'][0])
+    {
+        return $this->bulkEnhanceProductDataWithAIAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation bulkEnhanceProductDataWithAIAsyncWithHttpInfo
+     *
+     * Bulk Enhance Product Data With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkEnhanceProductDataWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkEnhanceProductDataWithAIAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bulkEnhanceProductDataWithAI'][0])
+    {
+        $returnType = 'object';
+        $request = $this->bulkEnhanceProductDataWithAIRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'bulkEnhanceProductDataWithAI'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkEnhanceProductDataWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function bulkEnhanceProductDataWithAIRequest($body, string $contentType = self::contentTypes['bulkEnhanceProductDataWithAI'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling bulkEnhanceProductDataWithAI'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/BulkEnhanceProductDataWithAI';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation bulkRemoveAssetsEntries
+     *
+     * Bulk Remove Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkRemoveAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function bulkRemoveAssetsEntries($body, string $contentType = self::contentTypes['bulkRemoveAssetsEntries'][0])
+    {
+        list($response) = $this->bulkRemoveAssetsEntriesWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation bulkRemoveAssetsEntriesWithHttpInfo
+     *
+     * Bulk Remove Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkRemoveAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bulkRemoveAssetsEntriesWithHttpInfo($body, string $contentType = self::contentTypes['bulkRemoveAssetsEntries'][0])
+    {
+        $request = $this->bulkRemoveAssetsEntriesRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('object' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('object' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'object', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'object';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation bulkRemoveAssetsEntriesAsync
+     *
+     * Bulk Remove Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkRemoveAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkRemoveAssetsEntriesAsync($body, string $contentType = self::contentTypes['bulkRemoveAssetsEntries'][0])
+    {
+        return $this->bulkRemoveAssetsEntriesAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation bulkRemoveAssetsEntriesAsyncWithHttpInfo
+     *
+     * Bulk Remove Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkRemoveAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkRemoveAssetsEntriesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bulkRemoveAssetsEntries'][0])
+    {
+        $returnType = 'object';
+        $request = $this->bulkRemoveAssetsEntriesRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'bulkRemoveAssetsEntries'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkRemoveAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function bulkRemoveAssetsEntriesRequest($body, string $contentType = self::contentTypes['bulkRemoveAssetsEntries'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling bulkRemoveAssetsEntries'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/BulkRemoveAssetsEntries';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation bulkUpdateAssetsEntries
+     *
+     * Bulk Update Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function bulkUpdateAssetsEntries($body, string $contentType = self::contentTypes['bulkUpdateAssetsEntries'][0])
+    {
+        list($response) = $this->bulkUpdateAssetsEntriesWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation bulkUpdateAssetsEntriesWithHttpInfo
+     *
+     * Bulk Update Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bulkUpdateAssetsEntriesWithHttpInfo($body, string $contentType = self::contentTypes['bulkUpdateAssetsEntries'][0])
+    {
+        $request = $this->bulkUpdateAssetsEntriesRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation bulkUpdateAssetsEntriesAsync
+     *
+     * Bulk Update Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkUpdateAssetsEntriesAsync($body, string $contentType = self::contentTypes['bulkUpdateAssetsEntries'][0])
+    {
+        return $this->bulkUpdateAssetsEntriesAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation bulkUpdateAssetsEntriesAsyncWithHttpInfo
+     *
+     * Bulk Update Assets Entries
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkUpdateAssetsEntriesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['bulkUpdateAssetsEntries'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse';
+        $request = $this->bulkUpdateAssetsEntriesRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'bulkUpdateAssetsEntries'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateAssetsEntries'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function bulkUpdateAssetsEntriesRequest($body, string $contentType = self::contentTypes['bulkUpdateAssetsEntries'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling bulkUpdateAssetsEntries'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/BulkUpdateAssetsEntries';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation bulkUpdateV2
+     *
+     * Bulk Update Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateV2'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductBulkUpdateResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function bulkUpdateV2($body, string $contentType = self::contentTypes['bulkUpdateV2'][0])
+    {
+        list($response) = $this->bulkUpdateV2WithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation bulkUpdateV2WithHttpInfo
+     *
+     * Bulk Update Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateV2'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductBulkUpdateResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function bulkUpdateV2WithHttpInfo($body, string $contentType = self::contentTypes['bulkUpdateV2'][0])
+    {
+        $request = $this->bulkUpdateV2Request($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductBulkUpdateResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductBulkUpdateResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductBulkUpdateResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductBulkUpdateResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation bulkUpdateV2Async
+     *
+     * Bulk Update Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateV2'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkUpdateV2Async($body, string $contentType = self::contentTypes['bulkUpdateV2'][0])
+    {
+        return $this->bulkUpdateV2AsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation bulkUpdateV2AsyncWithHttpInfo
+     *
+     * Bulk Update Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateV2'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function bulkUpdateV2AsyncWithHttpInfo($body, string $contentType = self::contentTypes['bulkUpdateV2'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateResponse';
+        $request = $this->bulkUpdateV2Request($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'bulkUpdateV2'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['bulkUpdateV2'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function bulkUpdateV2Request($body, string $contentType = self::contentTypes['bulkUpdateV2'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling bulkUpdateV2'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/BulkUpdateV2';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation createAttributeOptions
+     *
+     * Create Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function createAttributeOptions($body, string $contentType = self::contentTypes['createAttributeOptions'][0])
+    {
+        list($response) = $this->createAttributeOptionsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation createAttributeOptionsWithHttpInfo
+     *
+     * Create Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['createAttributeOptions'][0])
+    {
+        $request = $this->createAttributeOptionsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createAttributeOptionsAsync
+     *
+     * Create Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createAttributeOptionsAsync($body, string $contentType = self::contentTypes['createAttributeOptions'][0])
+    {
+        return $this->createAttributeOptionsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createAttributeOptionsAsyncWithHttpInfo
+     *
+     * Create Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createAttributeOptions'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse';
+        $request = $this->createAttributeOptionsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createAttributeOptions'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createAttributeOptionsRequest($body, string $contentType = self::contentTypes['createAttributeOptions'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling createAttributeOptions'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/CreateAttributeOptions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation createEntity
+     *
+     * Create Entity
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEntity'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function createEntity($body, string $contentType = self::contentTypes['createEntity'][0])
+    {
+        list($response) = $this->createEntityWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation createEntityWithHttpInfo
+     *
+     * Create Entity
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEntity'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createEntityWithHttpInfo($body, string $contentType = self::contentTypes['createEntity'][0])
+    {
+        $request = $this->createEntityRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createEntityAsync
+     *
+     * Create Entity
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEntity'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createEntityAsync($body, string $contentType = self::contentTypes['createEntity'][0])
+    {
+        return $this->createEntityAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createEntityAsyncWithHttpInfo
+     *
+     * Create Entity
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEntity'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createEntityAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createEntity'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse';
+        $request = $this->createEntityRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createEntity'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createEntity'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createEntityRequest($body, string $contentType = self::contentTypes['createEntity'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling createEntity'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/CreateEntity';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation createOptionsList
+     *
+     * Create Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOptionsList'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function createOptionsList($body, string $contentType = self::contentTypes['createOptionsList'][0])
+    {
+        list($response) = $this->createOptionsListWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation createOptionsListWithHttpInfo
+     *
+     * Create Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOptionsList'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createOptionsListWithHttpInfo($body, string $contentType = self::contentTypes['createOptionsList'][0])
+    {
+        $request = $this->createOptionsListRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createOptionsListAsync
+     *
+     * Create Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createOptionsListAsync($body, string $contentType = self::contentTypes['createOptionsList'][0])
+    {
+        return $this->createOptionsListAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createOptionsListAsyncWithHttpInfo
+     *
+     * Create Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createOptionsListAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createOptionsList'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse';
+        $request = $this->createOptionsListRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createOptionsList'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createOptionsListRequest($body, string $contentType = self::contentTypes['createOptionsList'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling createOptionsList'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/CreateOptionsList';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation createProductWithAI
+     *
+     * Create Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function createProductWithAI($body, string $contentType = self::contentTypes['createProductWithAI'][0])
+    {
+        list($response) = $this->createProductWithAIWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation createProductWithAIWithHttpInfo
+     *
+     * Create Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function createProductWithAIWithHttpInfo($body, string $contentType = self::contentTypes['createProductWithAI'][0])
+    {
+        $request = $this->createProductWithAIRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation createProductWithAIAsync
+     *
+     * Create Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createProductWithAIAsync($body, string $contentType = self::contentTypes['createProductWithAI'][0])
+    {
+        return $this->createProductWithAIAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation createProductWithAIAsyncWithHttpInfo
+     *
+     * Create Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function createProductWithAIAsyncWithHttpInfo($body, string $contentType = self::contentTypes['createProductWithAI'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse';
+        $request = $this->createProductWithAIRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'createProductWithAI'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['createProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function createProductWithAIRequest($body, string $contentType = self::contentTypes['createProductWithAI'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling createProductWithAI'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/CreateProductWithAI';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getAttributeOption
+     *
+     * Get Attribute Option
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOption'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getAttributeOption($body, string $contentType = self::contentTypes['getAttributeOption'][0])
+    {
+        list($response) = $this->getAttributeOptionWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getAttributeOptionWithHttpInfo
+     *
+     * Get Attribute Option
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOption'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAttributeOptionWithHttpInfo($body, string $contentType = self::contentTypes['getAttributeOption'][0])
+    {
+        $request = $this->getAttributeOptionRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAttributeOptionAsync
+     *
+     * Get Attribute Option
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOption'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAttributeOptionAsync($body, string $contentType = self::contentTypes['getAttributeOption'][0])
+    {
+        return $this->getAttributeOptionAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAttributeOptionAsyncWithHttpInfo
+     *
+     * Get Attribute Option
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOption'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAttributeOptionAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getAttributeOption'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse';
+        $request = $this->getAttributeOptionRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getAttributeOption'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOption'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getAttributeOptionRequest($body, string $contentType = self::contentTypes['getAttributeOption'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getAttributeOption'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetAttributeOption';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getAttributeOptions
+     *
+     * Get Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getAttributeOptions($body, string $contentType = self::contentTypes['getAttributeOptions'][0])
+    {
+        list($response) = $this->getAttributeOptionsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getAttributeOptionsWithHttpInfo
+     *
+     * Get Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['getAttributeOptions'][0])
+    {
+        $request = $this->getAttributeOptionsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getAttributeOptionsAsync
+     *
+     * Get Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAttributeOptionsAsync($body, string $contentType = self::contentTypes['getAttributeOptions'][0])
+    {
+        return $this->getAttributeOptionsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getAttributeOptionsAsyncWithHttpInfo
+     *
+     * Get Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getAttributeOptions'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse';
+        $request = $this->getAttributeOptionsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getAttributeOptions'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getAttributeOptionsRequest($body, string $contentType = self::contentTypes['getAttributeOptions'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getAttributeOptions'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetAttributeOptions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getEntity
+     *
+     * Get Entity Details
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntity'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerEntity|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getEntity($body, string $contentType = self::contentTypes['getEntity'][0])
+    {
+        list($response) = $this->getEntityWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getEntityWithHttpInfo
+     *
+     * Get Entity Details
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntity'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerEntity|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getEntityWithHttpInfo($body, string $contentType = self::contentTypes['getEntity'][0])
+    {
+        $request = $this->getEntityRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerEntity' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerEntity' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerEntity', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerEntity';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerEntity',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getEntityAsync
+     *
+     * Get Entity Details
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntity'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getEntityAsync($body, string $contentType = self::contentTypes['getEntity'][0])
+    {
+        return $this->getEntityAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getEntityAsyncWithHttpInfo
+     *
+     * Get Entity Details
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntity'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getEntityAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getEntity'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerEntity';
+        $request = $this->getEntityRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getEntity'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getEntity'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getEntityRequest($body, string $contentType = self::contentTypes['getEntity'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getEntity'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetEntity';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getOptionsList
+     *
+     * Get Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOptionsList'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getOptionsList($body, string $contentType = self::contentTypes['getOptionsList'][0])
+    {
+        list($response) = $this->getOptionsListWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getOptionsListWithHttpInfo
+     *
+     * Get Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOptionsList'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getOptionsListWithHttpInfo($body, string $contentType = self::contentTypes['getOptionsList'][0])
+    {
+        $request = $this->getOptionsListRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getOptionsListAsync
+     *
+     * Get Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getOptionsListAsync($body, string $contentType = self::contentTypes['getOptionsList'][0])
+    {
+        return $this->getOptionsListAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getOptionsListAsyncWithHttpInfo
+     *
+     * Get Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getOptionsListAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getOptionsList'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse';
+        $request = $this->getOptionsListRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getOptionsList'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getOptionsListRequest($body, string $contentType = self::contentTypes['getOptionsList'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getOptionsList'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetOptionsList';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getProduct
+     *
+     * Get Product
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProduct'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductGetProductResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getProduct($body, string $contentType = self::contentTypes['getProduct'][0])
+    {
+        list($response) = $this->getProductWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getProductWithHttpInfo
+     *
+     * Get Product
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProduct'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductGetProductResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProductWithHttpInfo($body, string $contentType = self::contentTypes['getProduct'][0])
+    {
+        $request = $this->getProductRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductGetProductResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductGetProductResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetProductResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductGetProductResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductGetProductResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProductAsync
+     *
+     * Get Product
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProduct'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductAsync($body, string $contentType = self::contentTypes['getProduct'][0])
+    {
+        return $this->getProductAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getProductAsyncWithHttpInfo
+     *
+     * Get Product
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProduct'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getProduct'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductGetProductResponse';
+        $request = $this->getProductRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProduct'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProduct'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getProductRequest($body, string $contentType = self::contentTypes['getProduct'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getProduct'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetProduct';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getProductByCode
+     *
+     * Get Product By Code
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByCode'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductGetProductByCodeResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getProductByCode($body, string $contentType = self::contentTypes['getProductByCode'][0])
+    {
+        list($response) = $this->getProductByCodeWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getProductByCodeWithHttpInfo
+     *
+     * Get Product By Code
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByCode'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductGetProductByCodeResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProductByCodeWithHttpInfo($body, string $contentType = self::contentTypes['getProductByCode'][0])
+    {
+        $request = $this->getProductByCodeRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProductByCodeAsync
+     *
+     * Get Product By Code
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByCode'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductByCodeAsync($body, string $contentType = self::contentTypes['getProductByCode'][0])
+    {
+        return $this->getProductByCodeAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getProductByCodeAsyncWithHttpInfo
+     *
+     * Get Product By Code
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByCode'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductByCodeAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getProductByCode'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse';
+        $request = $this->getProductByCodeRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProductByCode'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByCode'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getProductByCodeRequest($body, string $contentType = self::contentTypes['getProductByCode'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getProductByCode'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetProductByCode';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getProductByUrlKey
+     *
+     * Get Product By Url Key
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByUrlKey'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getProductByUrlKey($body, string $contentType = self::contentTypes['getProductByUrlKey'][0])
+    {
+        list($response) = $this->getProductByUrlKeyWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getProductByUrlKeyWithHttpInfo
+     *
+     * Get Product By Url Key
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByUrlKey'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProductByUrlKeyWithHttpInfo($body, string $contentType = self::contentTypes['getProductByUrlKey'][0])
+    {
+        $request = $this->getProductByUrlKeyRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProductByUrlKeyAsync
+     *
+     * Get Product By Url Key
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByUrlKey'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductByUrlKeyAsync($body, string $contentType = self::contentTypes['getProductByUrlKey'][0])
+    {
+        return $this->getProductByUrlKeyAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getProductByUrlKeyAsyncWithHttpInfo
+     *
+     * Get Product By Url Key
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByUrlKey'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductByUrlKeyAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getProductByUrlKey'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse';
+        $request = $this->getProductByUrlKeyRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProductByUrlKey'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductByUrlKey'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getProductByUrlKeyRequest($body, string $contentType = self::contentTypes['getProductByUrlKey'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getProductByUrlKey'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetProductByUrlKey';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation getProductDataInReview
+     *
+     * Get Product Data In Review
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductDataInReview'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function getProductDataInReview($body, string $contentType = self::contentTypes['getProductDataInReview'][0])
+    {
+        list($response) = $this->getProductDataInReviewWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation getProductDataInReviewWithHttpInfo
+     *
+     * Get Product Data In Review
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductDataInReview'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function getProductDataInReviewWithHttpInfo($body, string $contentType = self::contentTypes['getProductDataInReview'][0])
+    {
+        $request = $this->getProductDataInReviewRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation getProductDataInReviewAsync
+     *
+     * Get Product Data In Review
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductDataInReview'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductDataInReviewAsync($body, string $contentType = self::contentTypes['getProductDataInReview'][0])
+    {
+        return $this->getProductDataInReviewAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation getProductDataInReviewAsyncWithHttpInfo
+     *
+     * Get Product Data In Review
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductDataInReview'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function getProductDataInReviewAsyncWithHttpInfo($body, string $contentType = self::contentTypes['getProductDataInReview'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse';
+        $request = $this->getProductDataInReviewRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'getProductDataInReview'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['getProductDataInReview'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function getProductDataInReviewRequest($body, string $contentType = self::contentTypes['getProductDataInReview'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling getProductDataInReview'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetProductDataInReview';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listAttributeOptions
+     *
+     * List Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function listAttributeOptions($body, string $contentType = self::contentTypes['listAttributeOptions'][0])
+    {
+        list($response) = $this->listAttributeOptionsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listAttributeOptionsWithHttpInfo
+     *
+     * List Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['listAttributeOptions'][0])
+    {
+        $request = $this->listAttributeOptionsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listAttributeOptionsAsync
+     *
+     * List Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listAttributeOptionsAsync($body, string $contentType = self::contentTypes['listAttributeOptions'][0])
+    {
+        return $this->listAttributeOptionsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listAttributeOptionsAsyncWithHttpInfo
+     *
+     * List Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['listAttributeOptions'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse';
+        $request = $this->listAttributeOptionsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listAttributeOptions'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listAttributeOptionsRequest($body, string $contentType = self::contentTypes['listAttributeOptions'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling listAttributeOptions'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/ListAttributeOptions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listEntities
+     *
+     * List Entities
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntities'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function listEntities($body, string $contentType = self::contentTypes['listEntities'][0])
+    {
+        list($response) = $this->listEntitiesWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listEntitiesWithHttpInfo
+     *
+     * List Entities
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntities'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listEntitiesWithHttpInfo($body, string $contentType = self::contentTypes['listEntities'][0])
+    {
+        $request = $this->listEntitiesRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listEntitiesAsync
+     *
+     * List Entities
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntities'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listEntitiesAsync($body, string $contentType = self::contentTypes['listEntities'][0])
+    {
+        return $this->listEntitiesAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listEntitiesAsyncWithHttpInfo
+     *
+     * List Entities
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntities'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listEntitiesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['listEntities'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse';
+        $request = $this->listEntitiesRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listEntities'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listEntities'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listEntitiesRequest($body, string $contentType = self::contentTypes['listEntities'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling listEntities'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/ListEntities';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listOptionsLists
+     *
+     * List Options Lists
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOptionsLists'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function listOptionsLists($body, string $contentType = self::contentTypes['listOptionsLists'][0])
+    {
+        list($response) = $this->listOptionsListsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listOptionsListsWithHttpInfo
+     *
+     * List Options Lists
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOptionsLists'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listOptionsListsWithHttpInfo($body, string $contentType = self::contentTypes['listOptionsLists'][0])
+    {
+        $request = $this->listOptionsListsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listOptionsListsAsync
+     *
+     * List Options Lists
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOptionsLists'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listOptionsListsAsync($body, string $contentType = self::contentTypes['listOptionsLists'][0])
+    {
+        return $this->listOptionsListsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listOptionsListsAsyncWithHttpInfo
+     *
+     * List Options Lists
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOptionsLists'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listOptionsListsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['listOptionsLists'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse';
+        $request = $this->listOptionsListsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listOptionsLists'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listOptionsLists'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listOptionsListsRequest($body, string $contentType = self::contentTypes['listOptionsLists'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling listOptionsLists'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/ListOptionsLists';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listProducts
+     *
+     * List Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProducts'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductListProductsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function listProducts($body, string $contentType = self::contentTypes['listProducts'][0])
+    {
+        list($response) = $this->listProductsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listProductsWithHttpInfo
+     *
+     * List Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProducts'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductListProductsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listProductsWithHttpInfo($body, string $contentType = self::contentTypes['listProducts'][0])
+    {
+        $request = $this->listProductsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductListProductsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductListProductsResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListProductsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductListProductsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductListProductsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listProductsAsync
+     *
+     * List Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProducts'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listProductsAsync($body, string $contentType = self::contentTypes['listProducts'][0])
+    {
+        return $this->listProductsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listProductsAsyncWithHttpInfo
+     *
+     * List Products
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProducts'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listProductsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['listProducts'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductListProductsResponse';
+        $request = $this->listProductsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listProducts'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProducts'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listProductsRequest($body, string $contentType = self::contentTypes['listProducts'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling listProducts'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/ListProducts';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listProductsByIds
+     *
+     * List Products By Ids
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsByIds'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductListProductsByIdsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function listProductsByIds($body, string $contentType = self::contentTypes['listProductsByIds'][0])
+    {
+        list($response) = $this->listProductsByIdsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listProductsByIdsWithHttpInfo
+     *
+     * List Products By Ids
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsByIds'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductListProductsByIdsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listProductsByIdsWithHttpInfo($body, string $contentType = self::contentTypes['listProductsByIds'][0])
+    {
+        $request = $this->listProductsByIdsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listProductsByIdsAsync
+     *
+     * List Products By Ids
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsByIds'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listProductsByIdsAsync($body, string $contentType = self::contentTypes['listProductsByIds'][0])
+    {
+        return $this->listProductsByIdsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listProductsByIdsAsyncWithHttpInfo
+     *
+     * List Products By Ids
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsByIds'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listProductsByIdsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['listProductsByIds'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse';
+        $request = $this->listProductsByIdsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listProductsByIds'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsByIds'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listProductsByIdsRequest($body, string $contentType = self::contentTypes['listProductsByIds'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling listProductsByIds'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/ListProductsByIds';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listProductsBySku
+     *
+     * List Products By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsBySku'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductListProductsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function listProductsBySku($body, string $contentType = self::contentTypes['listProductsBySku'][0])
+    {
+        list($response) = $this->listProductsBySkuWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listProductsBySkuWithHttpInfo
+     *
+     * List Products By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsBySku'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductListProductsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listProductsBySkuWithHttpInfo($body, string $contentType = self::contentTypes['listProductsBySku'][0])
+    {
+        $request = $this->listProductsBySkuRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listProductsBySkuAsync
+     *
+     * List Products By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsBySku'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listProductsBySkuAsync($body, string $contentType = self::contentTypes['listProductsBySku'][0])
+    {
+        return $this->listProductsBySkuAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listProductsBySkuAsyncWithHttpInfo
+     *
+     * List Products By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsBySku'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listProductsBySkuAsyncWithHttpInfo($body, string $contentType = self::contentTypes['listProductsBySku'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse';
+        $request = $this->listProductsBySkuRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listProductsBySku'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listProductsBySku'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listProductsBySkuRequest($body, string $contentType = self::contentTypes['listProductsBySku'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling listProductsBySku'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/ListProductsBySku';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation listVariantsBySku
+     *
+     * List Product Variants By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVariantsBySku'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function listVariantsBySku($body, string $contentType = self::contentTypes['listVariantsBySku'][0])
+    {
+        list($response) = $this->listVariantsBySkuWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation listVariantsBySkuWithHttpInfo
+     *
+     * List Product Variants By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVariantsBySku'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function listVariantsBySkuWithHttpInfo($body, string $contentType = self::contentTypes['listVariantsBySku'][0])
+    {
+        $request = $this->listVariantsBySkuRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation listVariantsBySkuAsync
+     *
+     * List Product Variants By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVariantsBySku'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listVariantsBySkuAsync($body, string $contentType = self::contentTypes['listVariantsBySku'][0])
+    {
+        return $this->listVariantsBySkuAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation listVariantsBySkuAsyncWithHttpInfo
+     *
+     * List Product Variants By Sku
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVariantsBySku'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function listVariantsBySkuAsyncWithHttpInfo($body, string $contentType = self::contentTypes['listVariantsBySku'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse';
+        $request = $this->listVariantsBySkuRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'listVariantsBySku'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['listVariantsBySku'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function listVariantsBySkuRequest($body, string $contentType = self::contentTypes['listVariantsBySku'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling listVariantsBySku'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/ListVariantsBySku';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -1228,672 +11353,11 @@ class ProductApi
             }
         }
 
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
         }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productBulkDeleteProducts
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkDeleteProducts'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return object|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productBulkDeleteProducts($body, string $contentType = self::contentTypes['productBulkDeleteProducts'][0])
-    {
-        list($response) = $this->productBulkDeleteProductsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productBulkDeleteProductsWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkDeleteProducts'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productBulkDeleteProductsWithHttpInfo($body, string $contentType = self::contentTypes['productBulkDeleteProducts'][0])
-    {
-        $request = $this->productBulkDeleteProductsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('object' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productBulkDeleteProductsAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkDeleteProducts'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkDeleteProductsAsync($body, string $contentType = self::contentTypes['productBulkDeleteProducts'][0])
-    {
-        return $this->productBulkDeleteProductsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productBulkDeleteProductsAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkDeleteProducts'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkDeleteProductsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productBulkDeleteProducts'][0])
-    {
-        $returnType = 'object';
-        $request = $this->productBulkDeleteProductsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productBulkDeleteProducts'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkDeleteProducts'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productBulkDeleteProductsRequest($body, string $contentType = self::contentTypes['productBulkDeleteProducts'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productBulkDeleteProducts'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/BulkDeleteProducts';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productBulkRemoveAssetsEntries
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkRemoveAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return object|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productBulkRemoveAssetsEntries($body, string $contentType = self::contentTypes['productBulkRemoveAssetsEntries'][0])
-    {
-        list($response) = $this->productBulkRemoveAssetsEntriesWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productBulkRemoveAssetsEntriesWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkRemoveAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productBulkRemoveAssetsEntriesWithHttpInfo($body, string $contentType = self::contentTypes['productBulkRemoveAssetsEntries'][0])
-    {
-        $request = $this->productBulkRemoveAssetsEntriesRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('object' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productBulkRemoveAssetsEntriesAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkRemoveAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkRemoveAssetsEntriesAsync($body, string $contentType = self::contentTypes['productBulkRemoveAssetsEntries'][0])
-    {
-        return $this->productBulkRemoveAssetsEntriesAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productBulkRemoveAssetsEntriesAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkRemoveAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkRemoveAssetsEntriesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productBulkRemoveAssetsEntries'][0])
-    {
-        $returnType = 'object';
-        $request = $this->productBulkRemoveAssetsEntriesRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productBulkRemoveAssetsEntries'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkRemoveAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productBulkRemoveAssetsEntriesRequest($body, string $contentType = self::contentTypes['productBulkRemoveAssetsEntries'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productBulkRemoveAssetsEntries'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/BulkRemoveAssetsEntries';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -2232,672 +11696,11 @@ class ProductApi
             }
         }
 
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
         }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productBulkUpdateAssetsEntries
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productBulkUpdateAssetsEntries($body, string $contentType = self::contentTypes['productBulkUpdateAssetsEntries'][0])
-    {
-        list($response) = $this->productBulkUpdateAssetsEntriesWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productBulkUpdateAssetsEntriesWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productBulkUpdateAssetsEntriesWithHttpInfo($body, string $contentType = self::contentTypes['productBulkUpdateAssetsEntries'][0])
-    {
-        $request = $this->productBulkUpdateAssetsEntriesRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productBulkUpdateAssetsEntriesAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkUpdateAssetsEntriesAsync($body, string $contentType = self::contentTypes['productBulkUpdateAssetsEntries'][0])
-    {
-        return $this->productBulkUpdateAssetsEntriesAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productBulkUpdateAssetsEntriesAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkUpdateAssetsEntriesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productBulkUpdateAssetsEntries'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse';
-        $request = $this->productBulkUpdateAssetsEntriesRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productBulkUpdateAssetsEntries'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateAssetsEntries'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productBulkUpdateAssetsEntriesRequest($body, string $contentType = self::contentTypes['productBulkUpdateAssetsEntries'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productBulkUpdateAssetsEntries'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/BulkUpdateAssetsEntries';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productBulkUpdateV2
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateV2'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productBulkUpdateV2($body, string $contentType = self::contentTypes['productBulkUpdateV2'][0])
-    {
-        list($response) = $this->productBulkUpdateV2WithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productBulkUpdateV2WithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateV2'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productBulkUpdateV2WithHttpInfo($body, string $contentType = self::contentTypes['productBulkUpdateV2'][0])
-    {
-        $request = $this->productBulkUpdateV2Request($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productBulkUpdateV2Async
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateV2'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkUpdateV2Async($body, string $contentType = self::contentTypes['productBulkUpdateV2'][0])
-    {
-        return $this->productBulkUpdateV2AsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productBulkUpdateV2AsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateV2'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productBulkUpdateV2AsyncWithHttpInfo($body, string $contentType = self::contentTypes['productBulkUpdateV2'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2';
-        $request = $this->productBulkUpdateV2Request($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productBulkUpdateV2'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2 $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productBulkUpdateV2'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productBulkUpdateV2Request($body, string $contentType = self::contentTypes['productBulkUpdateV2'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productBulkUpdateV2'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/BulkUpdateV2';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -3231,1005 +12034,11 @@ class ProductApi
             }
         }
 
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
         }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productCreateAttributeOptions
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productCreateAttributeOptions($body, string $contentType = self::contentTypes['productCreateAttributeOptions'][0])
-    {
-        list($response) = $this->productCreateAttributeOptionsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productCreateAttributeOptionsWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productCreateAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['productCreateAttributeOptions'][0])
-    {
-        $request = $this->productCreateAttributeOptionsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productCreateAttributeOptionsAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productCreateAttributeOptionsAsync($body, string $contentType = self::contentTypes['productCreateAttributeOptions'][0])
-    {
-        return $this->productCreateAttributeOptionsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productCreateAttributeOptionsAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productCreateAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productCreateAttributeOptions'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse';
-        $request = $this->productCreateAttributeOptionsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productCreateAttributeOptions'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productCreateAttributeOptionsRequest($body, string $contentType = self::contentTypes['productCreateAttributeOptions'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productCreateAttributeOptions'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/CreateAttributeOptions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productCreateEntity
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateEntity'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productCreateEntity($body, string $contentType = self::contentTypes['productCreateEntity'][0])
-    {
-        list($response) = $this->productCreateEntityWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productCreateEntityWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateEntity'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productCreateEntityWithHttpInfo($body, string $contentType = self::contentTypes['productCreateEntity'][0])
-    {
-        $request = $this->productCreateEntityRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productCreateEntityAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateEntity'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productCreateEntityAsync($body, string $contentType = self::contentTypes['productCreateEntity'][0])
-    {
-        return $this->productCreateEntityAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productCreateEntityAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateEntity'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productCreateEntityAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productCreateEntity'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse';
-        $request = $this->productCreateEntityRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productCreateEntity'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntity $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateEntity'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productCreateEntityRequest($body, string $contentType = self::contentTypes['productCreateEntity'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productCreateEntity'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/CreateEntity';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productCreateOptionsList
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productCreateOptionsList($body, string $contentType = self::contentTypes['productCreateOptionsList'][0])
-    {
-        list($response) = $this->productCreateOptionsListWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productCreateOptionsListWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productCreateOptionsListWithHttpInfo($body, string $contentType = self::contentTypes['productCreateOptionsList'][0])
-    {
-        $request = $this->productCreateOptionsListRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productCreateOptionsListAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productCreateOptionsListAsync($body, string $contentType = self::contentTypes['productCreateOptionsList'][0])
-    {
-        return $this->productCreateOptionsListAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productCreateOptionsListAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productCreateOptionsListAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productCreateOptionsList'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse';
-        $request = $this->productCreateOptionsListRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productCreateOptionsList'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productCreateOptionsListRequest($body, string $contentType = self::contentTypes['productCreateOptionsList'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productCreateOptionsList'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/CreateOptionsList';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -4255,7 +12064,7 @@ class ProductApi
     /**
      * Operation productCreateProduct
      *
-     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body body (required)
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateProduct'] to see the possible values for this operation
      *
      * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
@@ -4272,7 +12081,7 @@ class ProductApi
     /**
      * Operation productCreateProductWithHttpInfo
      *
-     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body (required)
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateProduct'] to see the possible values for this operation
      *
      * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
@@ -4430,7 +12239,7 @@ class ProductApi
     /**
      * Operation productCreateProductAsync
      *
-     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body (required)
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateProduct'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4450,7 +12259,7 @@ class ProductApi
     /**
      * Operation productCreateProductAsyncWithHttpInfo
      *
-     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body (required)
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateProduct'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4501,7 +12310,7 @@ class ProductApi
     /**
      * Create request for operation 'productCreateProduct'
      *
-     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body (required)
+     * @param  \GeminiCommerce\Product\Model\ProductCreateProductRequest $body The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product. (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productCreateProduct'] to see the possible values for this operation
      *
      * @throws \InvalidArgumentException
@@ -4568,6 +12377,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -4901,6 +12715,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -5239,6 +13058,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -5572,6 +13396,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -5905,6 +13734,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -6238,2337 +14072,11 @@ class ProductApi
             }
         }
 
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
         }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productGetAttributeOption
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOption'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productGetAttributeOption($body, string $contentType = self::contentTypes['productGetAttributeOption'][0])
-    {
-        list($response) = $this->productGetAttributeOptionWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productGetAttributeOptionWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOption'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productGetAttributeOptionWithHttpInfo($body, string $contentType = self::contentTypes['productGetAttributeOption'][0])
-    {
-        $request = $this->productGetAttributeOptionRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productGetAttributeOptionAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOption'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetAttributeOptionAsync($body, string $contentType = self::contentTypes['productGetAttributeOption'][0])
-    {
-        return $this->productGetAttributeOptionAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productGetAttributeOptionAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOption'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetAttributeOptionAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productGetAttributeOption'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse';
-        $request = $this->productGetAttributeOptionRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productGetAttributeOption'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOption'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productGetAttributeOptionRequest($body, string $contentType = self::contentTypes['productGetAttributeOption'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productGetAttributeOption'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/GetAttributeOption';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productGetAttributeOptions
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productGetAttributeOptions($body, string $contentType = self::contentTypes['productGetAttributeOptions'][0])
-    {
-        list($response) = $this->productGetAttributeOptionsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productGetAttributeOptionsWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productGetAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['productGetAttributeOptions'][0])
-    {
-        $request = $this->productGetAttributeOptionsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productGetAttributeOptionsAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetAttributeOptionsAsync($body, string $contentType = self::contentTypes['productGetAttributeOptions'][0])
-    {
-        return $this->productGetAttributeOptionsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productGetAttributeOptionsAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productGetAttributeOptions'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse';
-        $request = $this->productGetAttributeOptionsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productGetAttributeOptions'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productGetAttributeOptionsRequest($body, string $contentType = self::contentTypes['productGetAttributeOptions'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productGetAttributeOptions'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/GetAttributeOptions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productGetEntity
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetEntity'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerEntity|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productGetEntity($body, string $contentType = self::contentTypes['productGetEntity'][0])
-    {
-        list($response) = $this->productGetEntityWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productGetEntityWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetEntity'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerEntity|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productGetEntityWithHttpInfo($body, string $contentType = self::contentTypes['productGetEntity'][0])
-    {
-        $request = $this->productGetEntityRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerEntity' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerEntity' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerEntity', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerEntity';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerEntity',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productGetEntityAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetEntity'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetEntityAsync($body, string $contentType = self::contentTypes['productGetEntity'][0])
-    {
-        return $this->productGetEntityAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productGetEntityAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetEntity'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetEntityAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productGetEntity'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerEntity';
-        $request = $this->productGetEntityRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productGetEntity'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerEntityRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetEntity'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productGetEntityRequest($body, string $contentType = self::contentTypes['productGetEntity'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productGetEntity'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/GetEntity';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productGetOptionsList
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetOptionsList'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productGetOptionsList($body, string $contentType = self::contentTypes['productGetOptionsList'][0])
-    {
-        list($response) = $this->productGetOptionsListWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productGetOptionsListWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetOptionsList'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productGetOptionsListWithHttpInfo($body, string $contentType = self::contentTypes['productGetOptionsList'][0])
-    {
-        $request = $this->productGetOptionsListRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productGetOptionsListAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetOptionsListAsync($body, string $contentType = self::contentTypes['productGetOptionsList'][0])
-    {
-        return $this->productGetOptionsListAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productGetOptionsListAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetOptionsListAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productGetOptionsList'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse';
-        $request = $this->productGetOptionsListRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productGetOptionsList'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productGetOptionsListRequest($body, string $contentType = self::contentTypes['productGetOptionsList'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productGetOptionsList'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/GetOptionsList';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productGetProduct
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProduct'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductGetProductResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productGetProduct($body, string $contentType = self::contentTypes['productGetProduct'][0])
-    {
-        list($response) = $this->productGetProductWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productGetProductWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProduct'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductGetProductResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productGetProductWithHttpInfo($body, string $contentType = self::contentTypes['productGetProduct'][0])
-    {
-        $request = $this->productGetProductRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductGetProductResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductGetProductResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetProductResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductGetProductResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductGetProductResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productGetProductAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProduct'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetProductAsync($body, string $contentType = self::contentTypes['productGetProduct'][0])
-    {
-        return $this->productGetProductAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productGetProductAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProduct'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetProductAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productGetProduct'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductGetProductResponse';
-        $request = $this->productGetProductRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productGetProduct'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProduct'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productGetProductRequest($body, string $contentType = self::contentTypes['productGetProduct'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productGetProduct'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/GetProduct';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productGetProductByCode
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByCode'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductGetProductByCodeResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productGetProductByCode($body, string $contentType = self::contentTypes['productGetProductByCode'][0])
-    {
-        list($response) = $this->productGetProductByCodeWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productGetProductByCodeWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByCode'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductGetProductByCodeResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productGetProductByCodeWithHttpInfo($body, string $contentType = self::contentTypes['productGetProductByCode'][0])
-    {
-        $request = $this->productGetProductByCodeRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productGetProductByCodeAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByCode'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetProductByCodeAsync($body, string $contentType = self::contentTypes['productGetProductByCode'][0])
-    {
-        return $this->productGetProductByCodeAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productGetProductByCodeAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByCode'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetProductByCodeAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productGetProductByCode'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse';
-        $request = $this->productGetProductByCodeRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productGetProductByCode'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByCode'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productGetProductByCodeRequest($body, string $contentType = self::contentTypes['productGetProductByCode'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productGetProductByCode'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/GetProductByCode';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productGetProductByUrlKey
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByUrlKey'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productGetProductByUrlKey($body, string $contentType = self::contentTypes['productGetProductByUrlKey'][0])
-    {
-        list($response) = $this->productGetProductByUrlKeyWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productGetProductByUrlKeyWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByUrlKey'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productGetProductByUrlKeyWithHttpInfo($body, string $contentType = self::contentTypes['productGetProductByUrlKey'][0])
-    {
-        $request = $this->productGetProductByUrlKeyRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productGetProductByUrlKeyAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByUrlKey'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetProductByUrlKeyAsync($body, string $contentType = self::contentTypes['productGetProductByUrlKey'][0])
-    {
-        return $this->productGetProductByUrlKeyAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productGetProductByUrlKeyAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByUrlKey'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productGetProductByUrlKeyAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productGetProductByUrlKey'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse';
-        $request = $this->productGetProductByUrlKeyRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productGetProductByUrlKey'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productGetProductByUrlKey'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productGetProductByUrlKeyRequest($body, string $contentType = self::contentTypes['productGetProductByUrlKey'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productGetProductByUrlKey'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/GetProductByUrlKey';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -8594,8 +14102,6 @@ class ProductApi
     /**
      * Operation productListAttributeGroups
      *
-     * Attribute Groups endpoints
-     *
      * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsRequest $body body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeGroups'] to see the possible values for this operation
      *
@@ -8611,8 +14117,6 @@ class ProductApi
 
     /**
      * Operation productListAttributeGroupsWithHttpInfo
-     *
-     * Attribute Groups endpoints
      *
      * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeGroups'] to see the possible values for this operation
@@ -8771,8 +14275,6 @@ class ProductApi
     /**
      * Operation productListAttributeGroupsAsync
      *
-     * Attribute Groups endpoints
-     *
      * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeGroups'] to see the possible values for this operation
      *
@@ -8791,8 +14293,6 @@ class ProductApi
 
     /**
      * Operation productListAttributeGroupsAsyncWithHttpInfo
-     *
-     * Attribute Groups endpoints
      *
      * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsRequest $body (required)
      * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeGroups'] to see the possible values for this operation
@@ -8910,2670 +14410,11 @@ class ProductApi
             }
         }
 
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
         }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productListAttributeOptions
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productListAttributeOptions($body, string $contentType = self::contentTypes['productListAttributeOptions'][0])
-    {
-        list($response) = $this->productListAttributeOptionsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productListAttributeOptionsWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productListAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['productListAttributeOptions'][0])
-    {
-        $request = $this->productListAttributeOptionsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productListAttributeOptionsAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListAttributeOptionsAsync($body, string $contentType = self::contentTypes['productListAttributeOptions'][0])
-    {
-        return $this->productListAttributeOptionsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productListAttributeOptionsAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productListAttributeOptions'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse';
-        $request = $this->productListAttributeOptionsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productListAttributeOptions'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productListAttributeOptionsRequest($body, string $contentType = self::contentTypes['productListAttributeOptions'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productListAttributeOptions'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/ListAttributeOptions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productListEntities
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListEntities'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productListEntities($body, string $contentType = self::contentTypes['productListEntities'][0])
-    {
-        list($response) = $this->productListEntitiesWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productListEntitiesWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListEntities'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productListEntitiesWithHttpInfo($body, string $contentType = self::contentTypes['productListEntities'][0])
-    {
-        $request = $this->productListEntitiesRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productListEntitiesAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListEntities'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListEntitiesAsync($body, string $contentType = self::contentTypes['productListEntities'][0])
-    {
-        return $this->productListEntitiesAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productListEntitiesAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListEntities'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListEntitiesAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productListEntities'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse';
-        $request = $this->productListEntitiesRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productListEntities'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListEntities'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productListEntitiesRequest($body, string $contentType = self::contentTypes['productListEntities'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productListEntities'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/ListEntities';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productListOptionsLists
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListOptionsLists'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productListOptionsLists($body, string $contentType = self::contentTypes['productListOptionsLists'][0])
-    {
-        list($response) = $this->productListOptionsListsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productListOptionsListsWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListOptionsLists'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productListOptionsListsWithHttpInfo($body, string $contentType = self::contentTypes['productListOptionsLists'][0])
-    {
-        $request = $this->productListOptionsListsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productListOptionsListsAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListOptionsLists'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListOptionsListsAsync($body, string $contentType = self::contentTypes['productListOptionsLists'][0])
-    {
-        return $this->productListOptionsListsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productListOptionsListsAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListOptionsLists'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListOptionsListsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productListOptionsLists'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse';
-        $request = $this->productListOptionsListsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productListOptionsLists'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListOptionsLists'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productListOptionsListsRequest($body, string $contentType = self::contentTypes['productListOptionsLists'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productListOptionsLists'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/ListOptionsLists';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productListProducts
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProducts'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductListProductsResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productListProducts($body, string $contentType = self::contentTypes['productListProducts'][0])
-    {
-        list($response) = $this->productListProductsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productListProductsWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProducts'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductListProductsResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productListProductsWithHttpInfo($body, string $contentType = self::contentTypes['productListProducts'][0])
-    {
-        $request = $this->productListProductsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductListProductsResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductListProductsResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListProductsResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductListProductsResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductListProductsResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productListProductsAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProducts'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListProductsAsync($body, string $contentType = self::contentTypes['productListProducts'][0])
-    {
-        return $this->productListProductsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productListProductsAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProducts'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListProductsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productListProducts'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductListProductsResponse';
-        $request = $this->productListProductsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productListProducts'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProducts'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productListProductsRequest($body, string $contentType = self::contentTypes['productListProducts'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productListProducts'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/ListProducts';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productListProductsByIds
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsByIds'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductListProductsByIdsResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productListProductsByIds($body, string $contentType = self::contentTypes['productListProductsByIds'][0])
-    {
-        list($response) = $this->productListProductsByIdsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productListProductsByIdsWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsByIds'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductListProductsByIdsResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productListProductsByIdsWithHttpInfo($body, string $contentType = self::contentTypes['productListProductsByIds'][0])
-    {
-        $request = $this->productListProductsByIdsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productListProductsByIdsAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsByIds'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListProductsByIdsAsync($body, string $contentType = self::contentTypes['productListProductsByIds'][0])
-    {
-        return $this->productListProductsByIdsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productListProductsByIdsAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsByIds'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListProductsByIdsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productListProductsByIds'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse';
-        $request = $this->productListProductsByIdsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productListProductsByIds'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsByIds'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productListProductsByIdsRequest($body, string $contentType = self::contentTypes['productListProductsByIds'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productListProductsByIds'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/ListProductsByIds';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productListProductsBySku
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsBySku'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductListProductsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productListProductsBySku($body, string $contentType = self::contentTypes['productListProductsBySku'][0])
-    {
-        list($response) = $this->productListProductsBySkuWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productListProductsBySkuWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsBySku'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductListProductsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productListProductsBySkuWithHttpInfo($body, string $contentType = self::contentTypes['productListProductsBySku'][0])
-    {
-        $request = $this->productListProductsBySkuRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productListProductsBySkuAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsBySku'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListProductsBySkuAsync($body, string $contentType = self::contentTypes['productListProductsBySku'][0])
-    {
-        return $this->productListProductsBySkuAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productListProductsBySkuAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsBySku'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListProductsBySkuAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productListProductsBySku'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse';
-        $request = $this->productListProductsBySkuRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productListProductsBySku'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListProductsBySku'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productListProductsBySkuRequest($body, string $contentType = self::contentTypes['productListProductsBySku'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productListProductsBySku'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/ListProductsBySku';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productListVariantsBySku
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListVariantsBySku'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productListVariantsBySku($body, string $contentType = self::contentTypes['productListVariantsBySku'][0])
-    {
-        list($response) = $this->productListVariantsBySkuWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productListVariantsBySkuWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListVariantsBySku'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productListVariantsBySkuWithHttpInfo($body, string $contentType = self::contentTypes['productListVariantsBySku'][0])
-    {
-        $request = $this->productListVariantsBySkuRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productListVariantsBySkuAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListVariantsBySku'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListVariantsBySkuAsync($body, string $contentType = self::contentTypes['productListVariantsBySku'][0])
-    {
-        return $this->productListVariantsBySkuAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productListVariantsBySkuAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListVariantsBySku'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productListVariantsBySkuAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productListVariantsBySku'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse';
-        $request = $this->productListVariantsBySkuRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productListVariantsBySku'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productListVariantsBySku'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productListVariantsBySkuRequest($body, string $contentType = self::contentTypes['productListVariantsBySku'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productListVariantsBySku'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/ListVariantsBySku';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productRemoveMediaGalleryEntry
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productRemoveMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return object|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productRemoveMediaGalleryEntry($body, string $contentType = self::contentTypes['productRemoveMediaGalleryEntry'][0])
-    {
-        list($response) = $this->productRemoveMediaGalleryEntryWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productRemoveMediaGalleryEntryWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productRemoveMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productRemoveMediaGalleryEntryWithHttpInfo($body, string $contentType = self::contentTypes['productRemoveMediaGalleryEntry'][0])
-    {
-        $request = $this->productRemoveMediaGalleryEntryRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('object' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productRemoveMediaGalleryEntryAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productRemoveMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productRemoveMediaGalleryEntryAsync($body, string $contentType = self::contentTypes['productRemoveMediaGalleryEntry'][0])
-    {
-        return $this->productRemoveMediaGalleryEntryAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productRemoveMediaGalleryEntryAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productRemoveMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productRemoveMediaGalleryEntryAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productRemoveMediaGalleryEntry'][0])
-    {
-        $returnType = 'object';
-        $request = $this->productRemoveMediaGalleryEntryRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productRemoveMediaGalleryEntry'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productRemoveMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productRemoveMediaGalleryEntryRequest($body, string $contentType = self::contentTypes['productRemoveMediaGalleryEntry'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productRemoveMediaGalleryEntry'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/RemoveMediaGalleryEntry';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -11907,6 +14748,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -12240,1013 +15086,11 @@ class ProductApi
             }
         }
 
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
         }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productUpdateAttributeOptions
-     *
-     * rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productUpdateAttributeOptions($body, string $contentType = self::contentTypes['productUpdateAttributeOptions'][0])
-    {
-        list($response) = $this->productUpdateAttributeOptionsWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productUpdateAttributeOptionsWithHttpInfo
-     *
-     * rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productUpdateAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['productUpdateAttributeOptions'][0])
-    {
-        $request = $this->productUpdateAttributeOptionsRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productUpdateAttributeOptionsAsync
-     *
-     * rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productUpdateAttributeOptionsAsync($body, string $contentType = self::contentTypes['productUpdateAttributeOptions'][0])
-    {
-        return $this->productUpdateAttributeOptionsAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productUpdateAttributeOptionsAsyncWithHttpInfo
-     *
-     * rpc GetAttributeOptionByCode (product.entitymanager.GetAttributeOptionByCodeRequest) returns (product.entitymanager.GetAttributeOptionByCodeResponse) {}
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productUpdateAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productUpdateAttributeOptions'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse';
-        $request = $this->productUpdateAttributeOptionsRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productUpdateAttributeOptions'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateAttributeOptions'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productUpdateAttributeOptionsRequest($body, string $contentType = self::contentTypes['productUpdateAttributeOptions'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productUpdateAttributeOptions'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/UpdateAttributeOptions';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productUpdateMediaGalleryEntry
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return object|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productUpdateMediaGalleryEntry($body, string $contentType = self::contentTypes['productUpdateMediaGalleryEntry'][0])
-    {
-        list($response) = $this->productUpdateMediaGalleryEntryWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productUpdateMediaGalleryEntryWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productUpdateMediaGalleryEntryWithHttpInfo($body, string $contentType = self::contentTypes['productUpdateMediaGalleryEntry'][0])
-    {
-        $request = $this->productUpdateMediaGalleryEntryRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('object' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('object' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, 'object', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = 'object';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        'object',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productUpdateMediaGalleryEntryAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productUpdateMediaGalleryEntryAsync($body, string $contentType = self::contentTypes['productUpdateMediaGalleryEntry'][0])
-    {
-        return $this->productUpdateMediaGalleryEntryAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productUpdateMediaGalleryEntryAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productUpdateMediaGalleryEntryAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productUpdateMediaGalleryEntry'][0])
-    {
-        $returnType = 'object';
-        $request = $this->productUpdateMediaGalleryEntryRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productUpdateMediaGalleryEntry'
-     *
-     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateMediaGalleryEntry'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productUpdateMediaGalleryEntryRequest($body, string $contentType = self::contentTypes['productUpdateMediaGalleryEntry'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productUpdateMediaGalleryEntry'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/UpdateMediaGalleryEntry';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
-
-        $defaultHeaders = [];
-        if ($this->config->getUserAgent()) {
-            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
-        }
-
-        $headers = array_merge(
-            $defaultHeaders,
-            $headerParams,
-            $headers
-        );
-
-        $operationHost = $this->config->getHost();
-        $query = ObjectSerializer::buildQuery($queryParams);
-        return new Request(
-            'POST',
-            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
-            $headers,
-            $httpBody
-        );
-    }
-
-    /**
-     * Operation productUpdateOptionsList
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus
-     */
-    public function productUpdateOptionsList($body, string $contentType = self::contentTypes['productUpdateOptionsList'][0])
-    {
-        list($response) = $this->productUpdateOptionsListWithHttpInfo($body, $contentType);
-        return $response;
-    }
-
-    /**
-     * Operation productUpdateOptionsListWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
-     * @throws \InvalidArgumentException
-     * @return array of \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
-     */
-    public function productUpdateOptionsListWithHttpInfo($body, string $contentType = self::contentTypes['productUpdateOptionsList'][0])
-    {
-        $request = $this->productUpdateOptionsListRequest($body, $contentType);
-
-        try {
-            $options = $this->createHttpClientOption();
-            try {
-                $response = $this->client->send($request, $options);
-            } catch (RequestException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
-                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
-                );
-            } catch (ConnectException $e) {
-                throw new ApiException(
-                    "[{$e->getCode()}] {$e->getMessage()}",
-                    (int) $e->getCode(),
-                    null,
-                    null
-                );
-            }
-
-            $statusCode = $response->getStatusCode();
-
-            if ($statusCode < 200 || $statusCode > 299) {
-                throw new ApiException(
-                    sprintf(
-                        '[%d] Error connecting to the API (%s)',
-                        $statusCode,
-                        (string) $request->getUri()
-                    ),
-                    $statusCode,
-                    $response->getHeaders(),
-                    (string) $response->getBody()
-                );
-            }
-
-            switch($statusCode) {
-                case 200:
-                    if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                default:
-                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
-                            try {
-                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                            } catch (\JsonException $exception) {
-                                throw new ApiException(
-                                    sprintf(
-                                        'Error JSON decoding server response (%s)',
-                                        $request->getUri()
-                                    ),
-                                    $statusCode,
-                                    $response->getHeaders(),
-                                    $content
-                                );
-                            }
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-            }
-
-            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse';
-            if ($returnType === '\SplFileObject') {
-                $content = $response->getBody(); //stream goes to serializer
-            } else {
-                $content = (string) $response->getBody();
-                if ($returnType !== 'string') {
-                    try {
-                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
-                    } catch (\JsonException $exception) {
-                        throw new ApiException(
-                            sprintf(
-                                'Error JSON decoding server response (%s)',
-                                $request->getUri()
-                            ),
-                            $statusCode,
-                            $response->getHeaders(),
-                            $content
-                        );
-                    }
-                }
-            }
-
-            return [
-                ObjectSerializer::deserialize($content, $returnType, []),
-                $response->getStatusCode(),
-                $response->getHeaders()
-            ];
-
-        } catch (ApiException $e) {
-            switch ($e->getCode()) {
-                case 200:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-                default:
-                    $data = ObjectSerializer::deserialize(
-                        $e->getResponseBody(),
-                        '\GeminiCommerce\Product\Model\RpcStatus',
-                        $e->getResponseHeaders()
-                    );
-                    $e->setResponseObject($data);
-                    break;
-            }
-            throw $e;
-        }
-    }
-
-    /**
-     * Operation productUpdateOptionsListAsync
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productUpdateOptionsListAsync($body, string $contentType = self::contentTypes['productUpdateOptionsList'][0])
-    {
-        return $this->productUpdateOptionsListAsyncWithHttpInfo($body, $contentType)
-            ->then(
-                function ($response) {
-                    return $response[0];
-                }
-            );
-    }
-
-    /**
-     * Operation productUpdateOptionsListAsyncWithHttpInfo
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Promise\PromiseInterface
-     */
-    public function productUpdateOptionsListAsyncWithHttpInfo($body, string $contentType = self::contentTypes['productUpdateOptionsList'][0])
-    {
-        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse';
-        $request = $this->productUpdateOptionsListRequest($body, $contentType);
-
-        return $this->client
-            ->sendAsync($request, $this->createHttpClientOption())
-            ->then(
-                function ($response) use ($returnType) {
-                    if ($returnType === '\SplFileObject') {
-                        $content = $response->getBody(); //stream goes to serializer
-                    } else {
-                        $content = (string) $response->getBody();
-                        if ($returnType !== 'string') {
-                            $content = json_decode($content);
-                        }
-                    }
-
-                    return [
-                        ObjectSerializer::deserialize($content, $returnType, []),
-                        $response->getStatusCode(),
-                        $response->getHeaders()
-                    ];
-                },
-                function ($exception) {
-                    $response = $exception->getResponse();
-                    $statusCode = $response->getStatusCode();
-                    throw new ApiException(
-                        sprintf(
-                            '[%d] Error connecting to the API (%s)',
-                            $statusCode,
-                            $exception->getRequest()->getUri()
-                        ),
-                        $statusCode,
-                        $response->getHeaders(),
-                        (string) $response->getBody()
-                    );
-                }
-            );
-    }
-
-    /**
-     * Create request for operation 'productUpdateOptionsList'
-     *
-     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
-     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['productUpdateOptionsList'] to see the possible values for this operation
-     *
-     * @throws \InvalidArgumentException
-     * @return \GuzzleHttp\Psr7\Request
-     */
-    public function productUpdateOptionsListRequest($body, string $contentType = self::contentTypes['productUpdateOptionsList'][0])
-    {
-
-        // verify the required parameter 'body' is set
-        if ($body === null || (is_array($body) && count($body) === 0)) {
-            throw new \InvalidArgumentException(
-                'Missing the required parameter $body when calling productUpdateOptionsList'
-            );
-        }
-
-
-        $resourcePath = '/product.Product/UpdateOptionsList';
-        $formParams = [];
-        $queryParams = [];
-        $headerParams = [];
-        $httpBody = '';
-        $multipart = false;
-
-
-
-
-
-        $headers = $this->headerSelector->selectHeaders(
-            ['application/json', ],
-            $contentType,
-            $multipart
-        );
-
-        // for model (json/xml)
-        if (isset($body)) {
-            if (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the body
-                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
-            } else {
-                $httpBody = $body;
-            }
-        } elseif (count($formParams) > 0) {
-            if ($multipart) {
-                $multipartContents = [];
-                foreach ($formParams as $formParamName => $formParamValue) {
-                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
-                    foreach ($formParamValueItems as $formParamValueItem) {
-                        $multipartContents[] = [
-                            'name' => $formParamName,
-                            'contents' => $formParamValueItem
-                        ];
-                    }
-                }
-                // for HTTP post (form)
-                $httpBody = new MultipartStream($multipartContents);
-
-            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
-                # if Content-Type contains "application/json", json_encode the form parameters
-                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
-            } else {
-                // for HTTP post (form)
-                $httpBody = ObjectSerializer::buildQuery($formParams);
-            }
-        }
-
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -13585,6 +15429,11 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
@@ -13918,6 +15767,2923 @@ class ProductApi
             }
         }
 
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation removeMediaGalleryEntry
+     *
+     * Remove Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function removeMediaGalleryEntry($body, string $contentType = self::contentTypes['removeMediaGalleryEntry'][0])
+    {
+        list($response) = $this->removeMediaGalleryEntryWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation removeMediaGalleryEntryWithHttpInfo
+     *
+     * Remove Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function removeMediaGalleryEntryWithHttpInfo($body, string $contentType = self::contentTypes['removeMediaGalleryEntry'][0])
+    {
+        $request = $this->removeMediaGalleryEntryRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('object' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('object' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'object', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'object';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation removeMediaGalleryEntryAsync
+     *
+     * Remove Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function removeMediaGalleryEntryAsync($body, string $contentType = self::contentTypes['removeMediaGalleryEntry'][0])
+    {
+        return $this->removeMediaGalleryEntryAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation removeMediaGalleryEntryAsyncWithHttpInfo
+     *
+     * Remove Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function removeMediaGalleryEntryAsyncWithHttpInfo($body, string $contentType = self::contentTypes['removeMediaGalleryEntry'][0])
+    {
+        $returnType = 'object';
+        $request = $this->removeMediaGalleryEntryRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'removeMediaGalleryEntry'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['removeMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function removeMediaGalleryEntryRequest($body, string $contentType = self::contentTypes['removeMediaGalleryEntry'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling removeMediaGalleryEntry'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/RemoveMediaGalleryEntry';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateAttributeOptions
+     *
+     * Update Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function updateAttributeOptions($body, string $contentType = self::contentTypes['updateAttributeOptions'][0])
+    {
+        list($response) = $this->updateAttributeOptionsWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updateAttributeOptionsWithHttpInfo
+     *
+     * Update Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateAttributeOptionsWithHttpInfo($body, string $contentType = self::contentTypes['updateAttributeOptions'][0])
+    {
+        $request = $this->updateAttributeOptionsRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateAttributeOptionsAsync
+     *
+     * Update Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateAttributeOptionsAsync($body, string $contentType = self::contentTypes['updateAttributeOptions'][0])
+    {
+        return $this->updateAttributeOptionsAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateAttributeOptionsAsyncWithHttpInfo
+     *
+     * Update Attribute Options
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateAttributeOptionsAsyncWithHttpInfo($body, string $contentType = self::contentTypes['updateAttributeOptions'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse';
+        $request = $this->updateAttributeOptionsRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateAttributeOptions'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateAttributeOptions'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updateAttributeOptionsRequest($body, string $contentType = self::contentTypes['updateAttributeOptions'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling updateAttributeOptions'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/UpdateAttributeOptions';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateDataToBeReviewed
+     *
+     * Get Enhance Product Data With AI Status
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function updateDataToBeReviewed($body, string $contentType = self::contentTypes['updateDataToBeReviewed'][0])
+    {
+        list($response) = $this->updateDataToBeReviewedWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updateDataToBeReviewedWithHttpInfo
+     *
+     * Get Enhance Product Data With AI Status
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateDataToBeReviewedWithHttpInfo($body, string $contentType = self::contentTypes['updateDataToBeReviewed'][0])
+    {
+        $request = $this->updateDataToBeReviewedRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateDataToBeReviewedAsync
+     *
+     * Get Enhance Product Data With AI Status
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateDataToBeReviewedAsync($body, string $contentType = self::contentTypes['updateDataToBeReviewed'][0])
+    {
+        return $this->updateDataToBeReviewedAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateDataToBeReviewedAsyncWithHttpInfo
+     *
+     * Get Enhance Product Data With AI Status
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateDataToBeReviewedAsyncWithHttpInfo($body, string $contentType = self::contentTypes['updateDataToBeReviewed'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse';
+        $request = $this->updateDataToBeReviewedRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateDataToBeReviewed'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updateDataToBeReviewedRequest($body, string $contentType = self::contentTypes['updateDataToBeReviewed'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling updateDataToBeReviewed'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/GetEnhanceProductDataWithAIStatus';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateDataToBeReviewed_0
+     *
+     * Update Data To Be Reviewed
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed_0'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function updateDataToBeReviewed_0($body, string $contentType = self::contentTypes['updateDataToBeReviewed_0'][0])
+    {
+        list($response) = $this->updateDataToBeReviewed_0WithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updateDataToBeReviewed_0WithHttpInfo
+     *
+     * Update Data To Be Reviewed
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed_0'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateDataToBeReviewed_0WithHttpInfo($body, string $contentType = self::contentTypes['updateDataToBeReviewed_0'][0])
+    {
+        $request = $this->updateDataToBeReviewed_0Request($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('object' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('object' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'object', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'object';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateDataToBeReviewed_0Async
+     *
+     * Update Data To Be Reviewed
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed_0'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateDataToBeReviewed_0Async($body, string $contentType = self::contentTypes['updateDataToBeReviewed_0'][0])
+    {
+        return $this->updateDataToBeReviewed_0AsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateDataToBeReviewed_0AsyncWithHttpInfo
+     *
+     * Update Data To Be Reviewed
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed_0'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateDataToBeReviewed_0AsyncWithHttpInfo($body, string $contentType = self::contentTypes['updateDataToBeReviewed_0'][0])
+    {
+        $returnType = 'object';
+        $request = $this->updateDataToBeReviewed_0Request($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateDataToBeReviewed_0'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateDataToBeReviewed_0'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updateDataToBeReviewed_0Request($body, string $contentType = self::contentTypes['updateDataToBeReviewed_0'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling updateDataToBeReviewed_0'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/UpdateDataToBeReviewed';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateMediaGalleryEntry
+     *
+     * Update Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function updateMediaGalleryEntry($body, string $contentType = self::contentTypes['updateMediaGalleryEntry'][0])
+    {
+        list($response) = $this->updateMediaGalleryEntryWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updateMediaGalleryEntryWithHttpInfo
+     *
+     * Update Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of object|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateMediaGalleryEntryWithHttpInfo($body, string $contentType = self::contentTypes['updateMediaGalleryEntry'][0])
+    {
+        $request = $this->updateMediaGalleryEntryRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('object' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('object' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, 'object', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = 'object';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        'object',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateMediaGalleryEntryAsync
+     *
+     * Update Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateMediaGalleryEntryAsync($body, string $contentType = self::contentTypes['updateMediaGalleryEntry'][0])
+    {
+        return $this->updateMediaGalleryEntryAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateMediaGalleryEntryAsyncWithHttpInfo
+     *
+     * Update Media Gallery Entry
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateMediaGalleryEntryAsyncWithHttpInfo($body, string $contentType = self::contentTypes['updateMediaGalleryEntry'][0])
+    {
+        $returnType = 'object';
+        $request = $this->updateMediaGalleryEntryRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateMediaGalleryEntry'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateMediaGalleryEntry'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updateMediaGalleryEntryRequest($body, string $contentType = self::contentTypes['updateMediaGalleryEntry'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling updateMediaGalleryEntry'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/UpdateMediaGalleryEntry';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateOptionsList
+     *
+     * Update Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOptionsList'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function updateOptionsList($body, string $contentType = self::contentTypes['updateOptionsList'][0])
+    {
+        list($response) = $this->updateOptionsListWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updateOptionsListWithHttpInfo
+     *
+     * Update Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOptionsList'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateOptionsListWithHttpInfo($body, string $contentType = self::contentTypes['updateOptionsList'][0])
+    {
+        $request = $this->updateOptionsListRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateOptionsListAsync
+     *
+     * Update Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateOptionsListAsync($body, string $contentType = self::contentTypes['updateOptionsList'][0])
+    {
+        return $this->updateOptionsListAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateOptionsListAsyncWithHttpInfo
+     *
+     * Update Options List
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateOptionsListAsyncWithHttpInfo($body, string $contentType = self::contentTypes['updateOptionsList'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse';
+        $request = $this->updateOptionsListRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateOptionsList'
+     *
+     * @param  \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateOptionsList'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updateOptionsListRequest($body, string $contentType = self::contentTypes['updateOptionsList'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling updateOptionsList'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/UpdateOptionsList';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
+
+        $defaultHeaders = [];
+        if ($this->config->getUserAgent()) {
+            $defaultHeaders['User-Agent'] = $this->config->getUserAgent();
+        }
+
+        $headers = array_merge(
+            $defaultHeaders,
+            $headerParams,
+            $headers
+        );
+
+        $operationHost = $this->config->getHost();
+        $query = ObjectSerializer::buildQuery($queryParams);
+        return new Request(
+            'POST',
+            $operationHost . $resourcePath . ($query ? "?{$query}" : ''),
+            $headers,
+            $httpBody
+        );
+    }
+
+    /**
+     * Operation updateProductWithAI
+     *
+     * Update Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest $body body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return \GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus
+     */
+    public function updateProductWithAI($body, string $contentType = self::contentTypes['updateProductWithAI'][0])
+    {
+        list($response) = $this->updateProductWithAIWithHttpInfo($body, $contentType);
+        return $response;
+    }
+
+    /**
+     * Operation updateProductWithAIWithHttpInfo
+     *
+     * Update Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \GeminiCommerce\Product\ApiException on non-2xx response or if the response body is not in the expected format
+     * @throws \InvalidArgumentException
+     * @return array of \GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus|\GeminiCommerce\Product\Model\RpcStatus, HTTP status code, HTTP response headers (array of strings)
+     */
+    public function updateProductWithAIWithHttpInfo($body, string $contentType = self::contentTypes['updateProductWithAI'][0])
+    {
+        $request = $this->updateProductWithAIRequest($body, $contentType);
+
+        try {
+            $options = $this->createHttpClientOption();
+            try {
+                $response = $this->client->send($request, $options);
+            } catch (RequestException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    $e->getResponse() ? $e->getResponse()->getHeaders() : null,
+                    $e->getResponse() ? (string) $e->getResponse()->getBody() : null
+                );
+            } catch (ConnectException $e) {
+                throw new ApiException(
+                    "[{$e->getCode()}] {$e->getMessage()}",
+                    (int) $e->getCode(),
+                    null,
+                    null
+                );
+            }
+
+            $statusCode = $response->getStatusCode();
+
+            if ($statusCode < 200 || $statusCode > 299) {
+                throw new ApiException(
+                    sprintf(
+                        '[%d] Error connecting to the API (%s)',
+                        $statusCode,
+                        (string) $request->getUri()
+                    ),
+                    $statusCode,
+                    $response->getHeaders(),
+                    (string) $response->getBody()
+                );
+            }
+
+            switch($statusCode) {
+                case 200:
+                    if ('\GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 401:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                case 500:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                default:
+                    if ('\GeminiCommerce\Product\Model\RpcStatus' === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ('\GeminiCommerce\Product\Model\RpcStatus' !== 'string') {
+                            try {
+                                $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                            } catch (\JsonException $exception) {
+                                throw new ApiException(
+                                    sprintf(
+                                        'Error JSON decoding server response (%s)',
+                                        $request->getUri()
+                                    ),
+                                    $statusCode,
+                                    $response->getHeaders(),
+                                    $content
+                                );
+                            }
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, '\GeminiCommerce\Product\Model\RpcStatus', []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+            }
+
+            $returnType = '\GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse';
+            if ($returnType === '\SplFileObject') {
+                $content = $response->getBody(); //stream goes to serializer
+            } else {
+                $content = (string) $response->getBody();
+                if ($returnType !== 'string') {
+                    try {
+                        $content = json_decode($content, false, 512, JSON_THROW_ON_ERROR);
+                    } catch (\JsonException $exception) {
+                        throw new ApiException(
+                            sprintf(
+                                'Error JSON decoding server response (%s)',
+                                $request->getUri()
+                            ),
+                            $statusCode,
+                            $response->getHeaders(),
+                            $content
+                        );
+                    }
+                }
+            }
+
+            return [
+                ObjectSerializer::deserialize($content, $returnType, []),
+                $response->getStatusCode(),
+                $response->getHeaders()
+            ];
+
+        } catch (ApiException $e) {
+            switch ($e->getCode()) {
+                case 200:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 401:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                case 500:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+                default:
+                    $data = ObjectSerializer::deserialize(
+                        $e->getResponseBody(),
+                        '\GeminiCommerce\Product\Model\RpcStatus',
+                        $e->getResponseHeaders()
+                    );
+                    $e->setResponseObject($data);
+                    break;
+            }
+            throw $e;
+        }
+    }
+
+    /**
+     * Operation updateProductWithAIAsync
+     *
+     * Update Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateProductWithAIAsync($body, string $contentType = self::contentTypes['updateProductWithAI'][0])
+    {
+        return $this->updateProductWithAIAsyncWithHttpInfo($body, $contentType)
+            ->then(
+                function ($response) {
+                    return $response[0];
+                }
+            );
+    }
+
+    /**
+     * Operation updateProductWithAIAsyncWithHttpInfo
+     *
+     * Update Product With AI
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Promise\PromiseInterface
+     */
+    public function updateProductWithAIAsyncWithHttpInfo($body, string $contentType = self::contentTypes['updateProductWithAI'][0])
+    {
+        $returnType = '\GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse';
+        $request = $this->updateProductWithAIRequest($body, $contentType);
+
+        return $this->client
+            ->sendAsync($request, $this->createHttpClientOption())
+            ->then(
+                function ($response) use ($returnType) {
+                    if ($returnType === '\SplFileObject') {
+                        $content = $response->getBody(); //stream goes to serializer
+                    } else {
+                        $content = (string) $response->getBody();
+                        if ($returnType !== 'string') {
+                            $content = json_decode($content);
+                        }
+                    }
+
+                    return [
+                        ObjectSerializer::deserialize($content, $returnType, []),
+                        $response->getStatusCode(),
+                        $response->getHeaders()
+                    ];
+                },
+                function ($exception) {
+                    $response = $exception->getResponse();
+                    $statusCode = $response->getStatusCode();
+                    throw new ApiException(
+                        sprintf(
+                            '[%d] Error connecting to the API (%s)',
+                            $statusCode,
+                            $exception->getRequest()->getUri()
+                        ),
+                        $statusCode,
+                        $response->getHeaders(),
+                        (string) $response->getBody()
+                    );
+                }
+            );
+    }
+
+    /**
+     * Create request for operation 'updateProductWithAI'
+     *
+     * @param  \GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest $body (required)
+     * @param  string $contentType The value for the Content-Type header. Check self::contentTypes['updateProductWithAI'] to see the possible values for this operation
+     *
+     * @throws \InvalidArgumentException
+     * @return \GuzzleHttp\Psr7\Request
+     */
+    public function updateProductWithAIRequest($body, string $contentType = self::contentTypes['updateProductWithAI'][0])
+    {
+
+        // verify the required parameter 'body' is set
+        if ($body === null || (is_array($body) && count($body) === 0)) {
+            throw new \InvalidArgumentException(
+                'Missing the required parameter $body when calling updateProductWithAI'
+            );
+        }
+
+
+        $resourcePath = '/product.Product/UpdateProductWithAI';
+        $formParams = [];
+        $queryParams = [];
+        $headerParams = [];
+        $httpBody = '';
+        $multipart = false;
+
+
+
+
+
+        $headers = $this->headerSelector->selectHeaders(
+            ['application/json', ],
+            $contentType,
+            $multipart
+        );
+
+        // for model (json/xml)
+        if (isset($body)) {
+            if (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the body
+                $httpBody = \GuzzleHttp\Utils::jsonEncode(ObjectSerializer::sanitizeForSerialization($body));
+            } else {
+                $httpBody = $body;
+            }
+        } elseif (count($formParams) > 0) {
+            if ($multipart) {
+                $multipartContents = [];
+                foreach ($formParams as $formParamName => $formParamValue) {
+                    $formParamValueItems = is_array($formParamValue) ? $formParamValue : [$formParamValue];
+                    foreach ($formParamValueItems as $formParamValueItem) {
+                        $multipartContents[] = [
+                            'name' => $formParamName,
+                            'contents' => $formParamValueItem
+                        ];
+                    }
+                }
+                // for HTTP post (form)
+                $httpBody = new MultipartStream($multipartContents);
+
+            } elseif (stripos($headers['Content-Type'], 'application/json') !== false) {
+                # if Content-Type contains "application/json", json_encode the form parameters
+                $httpBody = \GuzzleHttp\Utils::jsonEncode($formParams);
+            } else {
+                // for HTTP post (form)
+                $httpBody = ObjectSerializer::buildQuery($formParams);
+            }
+        }
+
+        // this endpoint requires API key authentication
+        $apiKey = $this->config->getApiKeyWithPrefix('Authorization');
+        if ($apiKey !== null) {
+            $headers['Authorization'] = $apiKey;
+        }
 
         $defaultHeaders = [];
         if ($this->config->getUserAgent()) {
