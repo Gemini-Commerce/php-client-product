@@ -7,7 +7,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   | [optional]
-**entity_data**| [**\GeminiCommerce\Product\Model\EntitymanagerEntityIdentifier**](EntitymanagerEntityIdentifier.md) |   | [optional]
+**entity_data**| [**\OpenAPI\Client\Model\EntitymanagerEntityIdentifier**](EntitymanagerEntityIdentifier.md) |   | [optional]
 **entity_id**| **string** |   | [optional]
 
 

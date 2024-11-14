@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   | [optional]
 **product_id**| **string** |   | [optional]
-**payload**| [**\GeminiCommerce\Product\Model\ProductDataInReview**](ProductDataInReview.md) |   | [optional]
+**payload**| [**\OpenAPI\Client\Model\ProductDataInReview**](ProductDataInReview.md) |   | [optional]
 **payload_mask**| **string** |   | [optional]
 
 

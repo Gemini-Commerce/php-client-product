@@ -7,7 +7,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id**| **string** |   | [optional]
-**payload**| [**\GeminiCommerce\Product\Model\ProductUpdateAssetEntryPayload**](ProductUpdateAssetEntryPayload.md) |   | [optional]
+**payload**| [**\OpenAPI\Client\Model\ProductUpdateAssetEntryPayload**](ProductUpdateAssetEntryPayload.md) |   | [optional]
 **payload_mask**| **string** |   | [optional]
 
 

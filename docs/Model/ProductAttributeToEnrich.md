@@ -7,7 +7,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **code**| **string** |   | [optional]
-**type**| [**\GeminiCommerce\Product\Model\ProductAttributeToEnrichType**](ProductAttributeToEnrichType.md) |  for more information please, see Model/ProductAttributeToEnrichType.php  | [optional]
+**type**| [**\OpenAPI\Client\Model\ProductAttributeToEnrichType**](ProductAttributeToEnrichType.md) |  for more information please, see Model/ProductAttributeToEnrichType.php  | [optional]
 **can_create_value**| **bool** |   | [optional]
 
 

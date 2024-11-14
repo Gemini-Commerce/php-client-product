@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data_in_review**| [**\GeminiCommerce\Product\Model\ProductDataInReview**](ProductDataInReview.md) |   | [optional]
+**data_in_review**| [**\OpenAPI\Client\Model\ProductDataInReview**](ProductDataInReview.md) |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

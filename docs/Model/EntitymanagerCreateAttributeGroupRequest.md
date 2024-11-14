@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   | [optional]
 **code**| **string** |   | [optional]
-**label**| [**\GeminiCommerce\Product\Model\ProductentitymanagerLocalizedText**](ProductentitymanagerLocalizedText.md) |   | [optional]
+**label**| [**\OpenAPI\Client\Model\ProductentitymanagerLocalizedText**](ProductentitymanagerLocalizedText.md) |   | [optional]
 **sort**| **int** |   | [optional]
 **visibility**| **string[]** |   | [optional]
 

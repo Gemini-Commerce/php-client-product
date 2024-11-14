@@ -7,8 +7,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **parent_id**| **string** |   | [optional]
-**job_type**| [**\GeminiCommerce\Product\Model\ProductAttributeInReviewJobType**](ProductAttributeInReviewJobType.md) |  for more information please, see Model/ProductAttributeInReviewJobType.php  | [optional]
-**job_status**| [**\GeminiCommerce\Product\Model\ProductAttributeInReviewJobStatus**](ProductAttributeInReviewJobStatus.md) |  for more information please, see Model/ProductAttributeInReviewJobStatus.php  | [optional]
+**job_type**| [**\OpenAPI\Client\Model\ProductAttributeInReviewJobType**](ProductAttributeInReviewJobType.md) |  for more information please, see Model/ProductAttributeInReviewJobType.php  | [optional]
+**job_status**| [**\OpenAPI\Client\Model\ProductAttributeInReviewJobStatus**](ProductAttributeInReviewJobStatus.md) |  for more information please, see Model/ProductAttributeInReviewJobStatus.php  | [optional]
 **id**| **string** |   | [optional]
 **started_at**| **\DateTime** |   | [optional]
 **executed_at**| **\DateTime** |   | [optional]

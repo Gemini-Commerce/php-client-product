@@ -13,7 +13,7 @@ Name | Type | Description | Notes
 **parent_code**| **string** |   | [optional]
 **label**| **string** |   | [optional]
 **relationships**| **string[]** |   | [optional]
-**attributes**| [**\GeminiCommerce\Product\Model\EntitymanagerAttribute[]**](EntitymanagerAttribute.md) |   | [optional]
+**attributes**| [**\OpenAPI\Client\Model\EntitymanagerAttribute[]**](EntitymanagerAttribute.md) |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

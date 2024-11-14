@@ -8,7 +8,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   | [optional]
 **code**| **string** |   | [optional]
-**payload**| [**\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeGroupRequestPayload**](EntitymanagerUpdateAttributeGroupRequestPayload.md) |   | [optional]
+**payload**| [**\OpenAPI\Client\Model\EntitymanagerUpdateAttributeGroupRequestPayload**](EntitymanagerUpdateAttributeGroupRequestPayload.md) |   | [optional]
 **field_mask**| **string** |   | [optional]
 
 

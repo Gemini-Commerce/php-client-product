@@ -15,11 +15,11 @@ Name | Type | Description | Notes
 **is_virtual**| **bool** | Indicates whether the product is virtual or not.  | [optional]
 **is_giftcard**| **bool** | Specifies whether the product is a gift card or not.  | [optional]
 **has_configurator**| **bool** |   | [optional]
-**url_key**| [**\GeminiCommerce\Product\Model\ProductLocalizedText**](ProductLocalizedText.md) |   | [optional]
+**url_key**| [**\OpenAPI\Client\Model\ProductLocalizedText**](ProductLocalizedText.md) |   | [optional]
 **max_saleable_quantity**| **int** | Specifies the maximum quantity that can be sold for the product in each order.  | [optional]
 **media_variant_attributes**| **string[]** |   | [optional]
-**attributes**| [**array<string,\GeminiCommerce\Product\Model\ProtobufAny>**](ProtobufAny.md) | Contains a map of additional attributes associated with the product, where the key is the attribute name and the value is any type of value.  | [optional]
-**variants**| [**array<string,\GeminiCommerce\Product\Model\ProductProductVariant>**](ProductProductVariant.md) | Represents a map of product variants associated with the product, where the key is the variant ID or code, and the value is a ProductVariant message.  | [optional]
+**attributes**| [**array<string,\OpenAPI\Client\Model\ProtobufAny>**](ProtobufAny.md) | Contains a map of additional attributes associated with the product, where the key is the attribute name and the value is any type of value.  | [optional]
+**variants**| [**array<string,\OpenAPI\Client\Model\ProductProductVariant>**](ProductProductVariant.md) | Represents a map of product variants associated with the product, where the key is the variant ID or code, and the value is a ProductVariant message.  | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

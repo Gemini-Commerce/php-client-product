@@ -8,9 +8,9 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   | [optional]
 **code**| **string** |   | [optional]
-**entity_data**| [**\GeminiCommerce\Product\Model\EntitymanagerEntityIdentifier**](EntitymanagerEntityIdentifier.md) |   | [optional]
+**entity_data**| [**\OpenAPI\Client\Model\EntitymanagerEntityIdentifier**](EntitymanagerEntityIdentifier.md) |   | [optional]
 **entity_id**| **string** |   | [optional]
-**payload**| [**\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeRequestPayload**](EntitymanagerUpdateAttributeRequestPayload.md) |   | [optional]
+**payload**| [**\OpenAPI\Client\Model\EntitymanagerUpdateAttributeRequestPayload**](EntitymanagerUpdateAttributeRequestPayload.md) |   | [optional]
 **field_mask**| **string** |   | [optional]
 
 

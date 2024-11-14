@@ -1,4 +1,4 @@
-# GeminiCommerce\Product\ProductApi
+# OpenAPI\Client\ProductApi
 
 All URIs are relative to https://product.api.gogemini.io, except if the operation defines another base path.
 
@@ -56,7 +56,7 @@ All URIs are relative to https://product.api.gogemini.io, except if the operatio
 ## `addMediaGalleryEntry()`
 
 ```php
-addMediaGalleryEntry($body): \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse
+addMediaGalleryEntry($body): \OpenAPI\Client\Model\ProductAddMediaGalleryEntryResponse
 ```
 
 Add Media Gallery Entry
@@ -71,18 +71,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest(); // \GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest
+$body = new \OpenAPI\Client\Model\ProductAddMediaGalleryEntryRequest(); // \OpenAPI\Client\Model\ProductAddMediaGalleryEntryRequest
 
 try {
     $result = $apiInstance->addMediaGalleryEntry($body);
@@ -96,11 +96,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryRequest**](../Model/ProductAddMediaGalleryEntryRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductAddMediaGalleryEntryRequest**](../Model/ProductAddMediaGalleryEntryRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductAddMediaGalleryEntryResponse**](../Model/ProductAddMediaGalleryEntryResponse.md)
+[**\OpenAPI\Client\Model\ProductAddMediaGalleryEntryResponse**](../Model/ProductAddMediaGalleryEntryResponse.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ try {
 ## `bulkAddAssetsEntries()`
 
 ```php
-bulkAddAssetsEntries($body): \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse
+bulkAddAssetsEntries($body): \OpenAPI\Client\Model\ProductBulkAddAssetsEntriesResponse
 ```
 
 Bulk Add Assets Entries
@@ -133,18 +133,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest(); // \GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest
+$body = new \OpenAPI\Client\Model\ProductBulkAddAssetsEntriesRequest(); // \OpenAPI\Client\Model\ProductBulkAddAssetsEntriesRequest
 
 try {
     $result = $apiInstance->bulkAddAssetsEntries($body);
@@ -158,11 +158,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesRequest**](../Model/ProductBulkAddAssetsEntriesRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductBulkAddAssetsEntriesRequest**](../Model/ProductBulkAddAssetsEntriesRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductBulkAddAssetsEntriesResponse**](../Model/ProductBulkAddAssetsEntriesResponse.md)
+[**\OpenAPI\Client\Model\ProductBulkAddAssetsEntriesResponse**](../Model/ProductBulkAddAssetsEntriesResponse.md)
 
 ### Authorization
 
@@ -195,18 +195,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest(); // \GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest
+$body = new \OpenAPI\Client\Model\ProductBulkDeleteProductsRequest(); // \OpenAPI\Client\Model\ProductBulkDeleteProductsRequest
 
 try {
     $result = $apiInstance->bulkDeleteProducts($body);
@@ -220,7 +220,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductBulkDeleteProductsRequest**](../Model/ProductBulkDeleteProductsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductBulkDeleteProductsRequest**](../Model/ProductBulkDeleteProductsRequest.md)|  | |
 
 ### Return type
 
@@ -257,18 +257,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest(); // \GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest
+$body = new \OpenAPI\Client\Model\ProductBulkEnhanceProductDataWithAIRequest(); // \OpenAPI\Client\Model\ProductBulkEnhanceProductDataWithAIRequest
 
 try {
     $result = $apiInstance->bulkEnhanceProductDataWithAI($body);
@@ -282,7 +282,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductBulkEnhanceProductDataWithAIRequest**](../Model/ProductBulkEnhanceProductDataWithAIRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductBulkEnhanceProductDataWithAIRequest**](../Model/ProductBulkEnhanceProductDataWithAIRequest.md)|  | |
 
 ### Return type
 
@@ -319,18 +319,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest(); // \GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest
+$body = new \OpenAPI\Client\Model\ProductBulkRemoveAssetsEntriesRequest(); // \OpenAPI\Client\Model\ProductBulkRemoveAssetsEntriesRequest
 
 try {
     $result = $apiInstance->bulkRemoveAssetsEntries($body);
@@ -344,7 +344,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductBulkRemoveAssetsEntriesRequest**](../Model/ProductBulkRemoveAssetsEntriesRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductBulkRemoveAssetsEntriesRequest**](../Model/ProductBulkRemoveAssetsEntriesRequest.md)|  | |
 
 ### Return type
 
@@ -366,7 +366,7 @@ try {
 ## `bulkUpdateAssetsEntries()`
 
 ```php
-bulkUpdateAssetsEntries($body): \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse
+bulkUpdateAssetsEntries($body): \OpenAPI\Client\Model\ProductBulkUpdateAssetsEntriesResponse
 ```
 
 Bulk Update Assets Entries
@@ -381,18 +381,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest(); // \GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest
+$body = new \OpenAPI\Client\Model\ProductBulkUpdateAssetsEntriesRequest(); // \OpenAPI\Client\Model\ProductBulkUpdateAssetsEntriesRequest
 
 try {
     $result = $apiInstance->bulkUpdateAssetsEntries($body);
@@ -406,11 +406,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesRequest**](../Model/ProductBulkUpdateAssetsEntriesRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductBulkUpdateAssetsEntriesRequest**](../Model/ProductBulkUpdateAssetsEntriesRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductBulkUpdateAssetsEntriesResponse**](../Model/ProductBulkUpdateAssetsEntriesResponse.md)
+[**\OpenAPI\Client\Model\ProductBulkUpdateAssetsEntriesResponse**](../Model/ProductBulkUpdateAssetsEntriesResponse.md)
 
 ### Authorization
 
@@ -428,7 +428,7 @@ try {
 ## `bulkUpdateV2()`
 
 ```php
-bulkUpdateV2($body): \GeminiCommerce\Product\Model\ProductBulkUpdateResponse
+bulkUpdateV2($body): \OpenAPI\Client\Model\ProductBulkUpdateResponse
 ```
 
 Bulk Update Products
@@ -443,18 +443,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2(); // \GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2
+$body = new \OpenAPI\Client\Model\ProductBulkUpdateRequestV2(); // \OpenAPI\Client\Model\ProductBulkUpdateRequestV2
 
 try {
     $result = $apiInstance->bulkUpdateV2($body);
@@ -468,11 +468,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductBulkUpdateRequestV2**](../Model/ProductBulkUpdateRequestV2.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductBulkUpdateRequestV2**](../Model/ProductBulkUpdateRequestV2.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductBulkUpdateResponse**](../Model/ProductBulkUpdateResponse.md)
+[**\OpenAPI\Client\Model\ProductBulkUpdateResponse**](../Model/ProductBulkUpdateResponse.md)
 
 ### Authorization
 
@@ -490,7 +490,7 @@ try {
 ## `createAttributeOptions()`
 
 ```php
-createAttributeOptions($body): \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse
+createAttributeOptions($body): \OpenAPI\Client\Model\EntitymanagerCreateAttributeOptionsResponse
 ```
 
 Create Attribute Options
@@ -505,18 +505,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest(); // \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerCreateAttributeOptionsRequest(); // \OpenAPI\Client\Model\EntitymanagerCreateAttributeOptionsRequest
 
 try {
     $result = $apiInstance->createAttributeOptions($body);
@@ -530,11 +530,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsRequest**](../Model/EntitymanagerCreateAttributeOptionsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerCreateAttributeOptionsRequest**](../Model/EntitymanagerCreateAttributeOptionsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeOptionsResponse**](../Model/EntitymanagerCreateAttributeOptionsResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerCreateAttributeOptionsResponse**](../Model/EntitymanagerCreateAttributeOptionsResponse.md)
 
 ### Authorization
 
@@ -552,7 +552,7 @@ try {
 ## `createEntity()`
 
 ```php
-createEntity($body): \GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse
+createEntity($body): \OpenAPI\Client\Model\EntitymanagerCreateEntityResponse
 ```
 
 Create Entity
@@ -567,18 +567,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerEntity(); // \GeminiCommerce\Product\Model\EntitymanagerEntity
+$body = new \OpenAPI\Client\Model\EntitymanagerEntity(); // \OpenAPI\Client\Model\EntitymanagerEntity
 
 try {
     $result = $apiInstance->createEntity($body);
@@ -592,11 +592,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerEntity**](../Model/EntitymanagerEntity.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerEntity**](../Model/EntitymanagerEntity.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerCreateEntityResponse**](../Model/EntitymanagerCreateEntityResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerCreateEntityResponse**](../Model/EntitymanagerCreateEntityResponse.md)
 
 ### Authorization
 
@@ -614,7 +614,7 @@ try {
 ## `createOptionsList()`
 
 ```php
-createOptionsList($body): \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse
+createOptionsList($body): \OpenAPI\Client\Model\EntitymanagerCreateOptionsListResponse
 ```
 
 Create Options List
@@ -629,18 +629,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest(); // \GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerCreateOptionsListRequest(); // \OpenAPI\Client\Model\EntitymanagerCreateOptionsListRequest
 
 try {
     $result = $apiInstance->createOptionsList($body);
@@ -654,11 +654,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListRequest**](../Model/EntitymanagerCreateOptionsListRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerCreateOptionsListRequest**](../Model/EntitymanagerCreateOptionsListRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerCreateOptionsListResponse**](../Model/EntitymanagerCreateOptionsListResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerCreateOptionsListResponse**](../Model/EntitymanagerCreateOptionsListResponse.md)
 
 ### Authorization
 
@@ -676,7 +676,7 @@ try {
 ## `createProductWithAI()`
 
 ```php
-createProductWithAI($body): \GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse
+createProductWithAI($body): \OpenAPI\Client\Model\ProductCreateProductWithAIResponse
 ```
 
 Create Product With AI
@@ -691,18 +691,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest(); // \GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest
+$body = new \OpenAPI\Client\Model\ProductCreateProductWithAIRequest(); // \OpenAPI\Client\Model\ProductCreateProductWithAIRequest
 
 try {
     $result = $apiInstance->createProductWithAI($body);
@@ -716,11 +716,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductCreateProductWithAIRequest**](../Model/ProductCreateProductWithAIRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductCreateProductWithAIRequest**](../Model/ProductCreateProductWithAIRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductCreateProductWithAIResponse**](../Model/ProductCreateProductWithAIResponse.md)
+[**\OpenAPI\Client\Model\ProductCreateProductWithAIResponse**](../Model/ProductCreateProductWithAIResponse.md)
 
 ### Authorization
 
@@ -738,7 +738,7 @@ try {
 ## `getAttributeOption()`
 
 ```php
-getAttributeOption($body): \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse
+getAttributeOption($body): \OpenAPI\Client\Model\EntitymanagerGetAttributeOptionResponse
 ```
 
 Get Attribute Option
@@ -753,18 +753,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest(); // \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerGetAttributeOptionRequest(); // \OpenAPI\Client\Model\EntitymanagerGetAttributeOptionRequest
 
 try {
     $result = $apiInstance->getAttributeOption($body);
@@ -778,11 +778,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionRequest**](../Model/EntitymanagerGetAttributeOptionRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerGetAttributeOptionRequest**](../Model/EntitymanagerGetAttributeOptionRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionResponse**](../Model/EntitymanagerGetAttributeOptionResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerGetAttributeOptionResponse**](../Model/EntitymanagerGetAttributeOptionResponse.md)
 
 ### Authorization
 
@@ -800,7 +800,7 @@ try {
 ## `getAttributeOptions()`
 
 ```php
-getAttributeOptions($body): \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse
+getAttributeOptions($body): \OpenAPI\Client\Model\EntitymanagerGetAttributeOptionsResponse
 ```
 
 Get Attribute Options
@@ -815,18 +815,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest(); // \GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerGetAttributeOptionsRequest(); // \OpenAPI\Client\Model\EntitymanagerGetAttributeOptionsRequest
 
 try {
     $result = $apiInstance->getAttributeOptions($body);
@@ -840,11 +840,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsRequest**](../Model/EntitymanagerGetAttributeOptionsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerGetAttributeOptionsRequest**](../Model/EntitymanagerGetAttributeOptionsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerGetAttributeOptionsResponse**](../Model/EntitymanagerGetAttributeOptionsResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerGetAttributeOptionsResponse**](../Model/EntitymanagerGetAttributeOptionsResponse.md)
 
 ### Authorization
 
@@ -862,7 +862,7 @@ try {
 ## `getEntity()`
 
 ```php
-getEntity($body): \GeminiCommerce\Product\Model\EntitymanagerEntity
+getEntity($body): \OpenAPI\Client\Model\EntitymanagerEntity
 ```
 
 Get Entity Details
@@ -877,18 +877,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerEntityRequest(); // \GeminiCommerce\Product\Model\EntitymanagerEntityRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerEntityRequest(); // \OpenAPI\Client\Model\EntitymanagerEntityRequest
 
 try {
     $result = $apiInstance->getEntity($body);
@@ -902,11 +902,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerEntityRequest**](../Model/EntitymanagerEntityRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerEntityRequest**](../Model/EntitymanagerEntityRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerEntity**](../Model/EntitymanagerEntity.md)
+[**\OpenAPI\Client\Model\EntitymanagerEntity**](../Model/EntitymanagerEntity.md)
 
 ### Authorization
 
@@ -924,7 +924,7 @@ try {
 ## `getOptionsList()`
 
 ```php
-getOptionsList($body): \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse
+getOptionsList($body): \OpenAPI\Client\Model\EntitymanagerGetOptionsListResponse
 ```
 
 Get Options List
@@ -939,18 +939,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest(); // \GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerGetOptionsListRequest(); // \OpenAPI\Client\Model\EntitymanagerGetOptionsListRequest
 
 try {
     $result = $apiInstance->getOptionsList($body);
@@ -964,11 +964,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListRequest**](../Model/EntitymanagerGetOptionsListRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerGetOptionsListRequest**](../Model/EntitymanagerGetOptionsListRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerGetOptionsListResponse**](../Model/EntitymanagerGetOptionsListResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerGetOptionsListResponse**](../Model/EntitymanagerGetOptionsListResponse.md)
 
 ### Authorization
 
@@ -986,7 +986,7 @@ try {
 ## `getProduct()`
 
 ```php
-getProduct($body): \GeminiCommerce\Product\Model\ProductGetProductResponse
+getProduct($body): \OpenAPI\Client\Model\ProductGetProductResponse
 ```
 
 Get Product
@@ -1001,18 +1001,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductGetProductRequest(); // \GeminiCommerce\Product\Model\ProductGetProductRequest
+$body = new \OpenAPI\Client\Model\ProductGetProductRequest(); // \OpenAPI\Client\Model\ProductGetProductRequest
 
 try {
     $result = $apiInstance->getProduct($body);
@@ -1026,11 +1026,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductGetProductRequest**](../Model/ProductGetProductRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductGetProductRequest**](../Model/ProductGetProductRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductGetProductResponse**](../Model/ProductGetProductResponse.md)
+[**\OpenAPI\Client\Model\ProductGetProductResponse**](../Model/ProductGetProductResponse.md)
 
 ### Authorization
 
@@ -1048,7 +1048,7 @@ try {
 ## `getProductByCode()`
 
 ```php
-getProductByCode($body): \GeminiCommerce\Product\Model\ProductGetProductByCodeResponse
+getProductByCode($body): \OpenAPI\Client\Model\ProductGetProductByCodeResponse
 ```
 
 Get Product By Code
@@ -1063,18 +1063,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest(); // \GeminiCommerce\Product\Model\ProductGetProductByCodeRequest
+$body = new \OpenAPI\Client\Model\ProductGetProductByCodeRequest(); // \OpenAPI\Client\Model\ProductGetProductByCodeRequest
 
 try {
     $result = $apiInstance->getProductByCode($body);
@@ -1088,11 +1088,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductGetProductByCodeRequest**](../Model/ProductGetProductByCodeRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductGetProductByCodeRequest**](../Model/ProductGetProductByCodeRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductGetProductByCodeResponse**](../Model/ProductGetProductByCodeResponse.md)
+[**\OpenAPI\Client\Model\ProductGetProductByCodeResponse**](../Model/ProductGetProductByCodeResponse.md)
 
 ### Authorization
 
@@ -1110,7 +1110,7 @@ try {
 ## `getProductByUrlKey()`
 
 ```php
-getProductByUrlKey($body): \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse
+getProductByUrlKey($body): \OpenAPI\Client\Model\ProductGetProductByUrlKeyResponse
 ```
 
 Get Product By Url Key
@@ -1125,18 +1125,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest(); // \GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest
+$body = new \OpenAPI\Client\Model\ProductGetProductByUrlKeyRequest(); // \OpenAPI\Client\Model\ProductGetProductByUrlKeyRequest
 
 try {
     $result = $apiInstance->getProductByUrlKey($body);
@@ -1150,11 +1150,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyRequest**](../Model/ProductGetProductByUrlKeyRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductGetProductByUrlKeyRequest**](../Model/ProductGetProductByUrlKeyRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductGetProductByUrlKeyResponse**](../Model/ProductGetProductByUrlKeyResponse.md)
+[**\OpenAPI\Client\Model\ProductGetProductByUrlKeyResponse**](../Model/ProductGetProductByUrlKeyResponse.md)
 
 ### Authorization
 
@@ -1172,7 +1172,7 @@ try {
 ## `getProductDataInReview()`
 
 ```php
-getProductDataInReview($body): \GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse
+getProductDataInReview($body): \OpenAPI\Client\Model\ProductGetProductDataInReviewResponse
 ```
 
 Get Product Data In Review
@@ -1187,18 +1187,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest(); // \GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest
+$body = new \OpenAPI\Client\Model\ProductGetProductDataInReviewRequest(); // \OpenAPI\Client\Model\ProductGetProductDataInReviewRequest
 
 try {
     $result = $apiInstance->getProductDataInReview($body);
@@ -1212,11 +1212,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductGetProductDataInReviewRequest**](../Model/ProductGetProductDataInReviewRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductGetProductDataInReviewRequest**](../Model/ProductGetProductDataInReviewRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductGetProductDataInReviewResponse**](../Model/ProductGetProductDataInReviewResponse.md)
+[**\OpenAPI\Client\Model\ProductGetProductDataInReviewResponse**](../Model/ProductGetProductDataInReviewResponse.md)
 
 ### Authorization
 
@@ -1234,7 +1234,7 @@ try {
 ## `listAttributeOptions()`
 
 ```php
-listAttributeOptions($body): \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse
+listAttributeOptions($body): \OpenAPI\Client\Model\EntitymanagerListAttributeOptionsResponse
 ```
 
 List Attribute Options
@@ -1247,18 +1247,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest(); // \GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerListAttributeOptionsRequest(); // \OpenAPI\Client\Model\EntitymanagerListAttributeOptionsRequest
 
 try {
     $result = $apiInstance->listAttributeOptions($body);
@@ -1272,11 +1272,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsRequest**](../Model/EntitymanagerListAttributeOptionsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerListAttributeOptionsRequest**](../Model/EntitymanagerListAttributeOptionsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerListAttributeOptionsResponse**](../Model/EntitymanagerListAttributeOptionsResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerListAttributeOptionsResponse**](../Model/EntitymanagerListAttributeOptionsResponse.md)
 
 ### Authorization
 
@@ -1294,7 +1294,7 @@ try {
 ## `listEntities()`
 
 ```php
-listEntities($body): \GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse
+listEntities($body): \OpenAPI\Client\Model\EntitymanagerListEntitiesResponse
 ```
 
 List Entities
@@ -1307,18 +1307,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest(); // \GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerListEntitiesRequest(); // \OpenAPI\Client\Model\EntitymanagerListEntitiesRequest
 
 try {
     $result = $apiInstance->listEntities($body);
@@ -1332,11 +1332,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerListEntitiesRequest**](../Model/EntitymanagerListEntitiesRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerListEntitiesRequest**](../Model/EntitymanagerListEntitiesRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerListEntitiesResponse**](../Model/EntitymanagerListEntitiesResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerListEntitiesResponse**](../Model/EntitymanagerListEntitiesResponse.md)
 
 ### Authorization
 
@@ -1354,7 +1354,7 @@ try {
 ## `listOptionsLists()`
 
 ```php
-listOptionsLists($body): \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse
+listOptionsLists($body): \OpenAPI\Client\Model\EntitymanagerListOptionsListsResponse
 ```
 
 List Options Lists
@@ -1369,18 +1369,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest(); // \GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerListOptionsListsRequest(); // \OpenAPI\Client\Model\EntitymanagerListOptionsListsRequest
 
 try {
     $result = $apiInstance->listOptionsLists($body);
@@ -1394,11 +1394,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsRequest**](../Model/EntitymanagerListOptionsListsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerListOptionsListsRequest**](../Model/EntitymanagerListOptionsListsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerListOptionsListsResponse**](../Model/EntitymanagerListOptionsListsResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerListOptionsListsResponse**](../Model/EntitymanagerListOptionsListsResponse.md)
 
 ### Authorization
 
@@ -1416,7 +1416,7 @@ try {
 ## `listProducts()`
 
 ```php
-listProducts($body): \GeminiCommerce\Product\Model\ProductListProductsResponse
+listProducts($body): \OpenAPI\Client\Model\ProductListProductsResponse
 ```
 
 List Products
@@ -1431,18 +1431,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductListProductsRequest(); // \GeminiCommerce\Product\Model\ProductListProductsRequest
+$body = new \OpenAPI\Client\Model\ProductListProductsRequest(); // \OpenAPI\Client\Model\ProductListProductsRequest
 
 try {
     $result = $apiInstance->listProducts($body);
@@ -1456,11 +1456,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductListProductsRequest**](../Model/ProductListProductsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductListProductsRequest**](../Model/ProductListProductsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductListProductsResponse**](../Model/ProductListProductsResponse.md)
+[**\OpenAPI\Client\Model\ProductListProductsResponse**](../Model/ProductListProductsResponse.md)
 
 ### Authorization
 
@@ -1478,7 +1478,7 @@ try {
 ## `listProductsByIds()`
 
 ```php
-listProductsByIds($body): \GeminiCommerce\Product\Model\ProductListProductsByIdsResponse
+listProductsByIds($body): \OpenAPI\Client\Model\ProductListProductsByIdsResponse
 ```
 
 List Products By Ids
@@ -1493,18 +1493,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest(); // \GeminiCommerce\Product\Model\ProductListProductsByIdsRequest
+$body = new \OpenAPI\Client\Model\ProductListProductsByIdsRequest(); // \OpenAPI\Client\Model\ProductListProductsByIdsRequest
 
 try {
     $result = $apiInstance->listProductsByIds($body);
@@ -1518,11 +1518,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductListProductsByIdsRequest**](../Model/ProductListProductsByIdsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductListProductsByIdsRequest**](../Model/ProductListProductsByIdsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductListProductsByIdsResponse**](../Model/ProductListProductsByIdsResponse.md)
+[**\OpenAPI\Client\Model\ProductListProductsByIdsResponse**](../Model/ProductListProductsByIdsResponse.md)
 
 ### Authorization
 
@@ -1540,7 +1540,7 @@ try {
 ## `listProductsBySku()`
 
 ```php
-listProductsBySku($body): \GeminiCommerce\Product\Model\ProductListProductsBySkuResponse
+listProductsBySku($body): \OpenAPI\Client\Model\ProductListProductsBySkuResponse
 ```
 
 List Products By Sku
@@ -1553,18 +1553,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest(); // \GeminiCommerce\Product\Model\ProductListProductsBySkuRequest
+$body = new \OpenAPI\Client\Model\ProductListProductsBySkuRequest(); // \OpenAPI\Client\Model\ProductListProductsBySkuRequest
 
 try {
     $result = $apiInstance->listProductsBySku($body);
@@ -1578,11 +1578,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductListProductsBySkuRequest**](../Model/ProductListProductsBySkuRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductListProductsBySkuRequest**](../Model/ProductListProductsBySkuRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductListProductsBySkuResponse**](../Model/ProductListProductsBySkuResponse.md)
+[**\OpenAPI\Client\Model\ProductListProductsBySkuResponse**](../Model/ProductListProductsBySkuResponse.md)
 
 ### Authorization
 
@@ -1600,7 +1600,7 @@ try {
 ## `listVariantsBySku()`
 
 ```php
-listVariantsBySku($body): \GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse
+listVariantsBySku($body): \OpenAPI\Client\Model\ProductListVariantsBySkuResponse
 ```
 
 List Product Variants By Sku
@@ -1613,18 +1613,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest(); // \GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest
+$body = new \OpenAPI\Client\Model\ProductListVariantsBySkuRequest(); // \OpenAPI\Client\Model\ProductListVariantsBySkuRequest
 
 try {
     $result = $apiInstance->listVariantsBySku($body);
@@ -1638,11 +1638,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductListVariantsBySkuRequest**](../Model/ProductListVariantsBySkuRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductListVariantsBySkuRequest**](../Model/ProductListVariantsBySkuRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductListVariantsBySkuResponse**](../Model/ProductListVariantsBySkuResponse.md)
+[**\OpenAPI\Client\Model\ProductListVariantsBySkuResponse**](../Model/ProductListVariantsBySkuResponse.md)
 
 ### Authorization
 
@@ -1660,7 +1660,7 @@ try {
 ## `productBulkCreateAttribute()`
 
 ```php
-productBulkCreateAttribute($body): \GeminiCommerce\Product\Model\EntitymanagerBulkCreateAttributeResponse
+productBulkCreateAttribute($body): \OpenAPI\Client\Model\EntitymanagerBulkCreateAttributeResponse
 ```
 
 
@@ -1675,18 +1675,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerBulkCreateAttributeRequest(); // \GeminiCommerce\Product\Model\EntitymanagerBulkCreateAttributeRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerBulkCreateAttributeRequest(); // \OpenAPI\Client\Model\EntitymanagerBulkCreateAttributeRequest
 
 try {
     $result = $apiInstance->productBulkCreateAttribute($body);
@@ -1700,11 +1700,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerBulkCreateAttributeRequest**](../Model/EntitymanagerBulkCreateAttributeRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerBulkCreateAttributeRequest**](../Model/EntitymanagerBulkCreateAttributeRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerBulkCreateAttributeResponse**](../Model/EntitymanagerBulkCreateAttributeResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerBulkCreateAttributeResponse**](../Model/EntitymanagerBulkCreateAttributeResponse.md)
 
 ### Authorization
 
@@ -1722,7 +1722,7 @@ try {
 ## `productBulkUpdate()`
 
 ```php
-productBulkUpdate($body): \GeminiCommerce\Product\Model\ProductBulkUpdateResponse
+productBulkUpdate($body): \OpenAPI\Client\Model\ProductBulkUpdateResponse
 ```
 
 
@@ -1737,18 +1737,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductBulkUpdateRequest(); // \GeminiCommerce\Product\Model\ProductBulkUpdateRequest
+$body = new \OpenAPI\Client\Model\ProductBulkUpdateRequest(); // \OpenAPI\Client\Model\ProductBulkUpdateRequest
 
 try {
     $result = $apiInstance->productBulkUpdate($body);
@@ -1762,11 +1762,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductBulkUpdateRequest**](../Model/ProductBulkUpdateRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductBulkUpdateRequest**](../Model/ProductBulkUpdateRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductBulkUpdateResponse**](../Model/ProductBulkUpdateResponse.md)
+[**\OpenAPI\Client\Model\ProductBulkUpdateResponse**](../Model/ProductBulkUpdateResponse.md)
 
 ### Authorization
 
@@ -1784,7 +1784,7 @@ try {
 ## `productCreateAttributeGroup()`
 
 ```php
-productCreateAttributeGroup($body): \GeminiCommerce\Product\Model\EntitymanagerAttributeGroup
+productCreateAttributeGroup($body): \OpenAPI\Client\Model\EntitymanagerAttributeGroup
 ```
 
 
@@ -1797,18 +1797,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeGroupRequest(); // \GeminiCommerce\Product\Model\EntitymanagerCreateAttributeGroupRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerCreateAttributeGroupRequest(); // \OpenAPI\Client\Model\EntitymanagerCreateAttributeGroupRequest
 
 try {
     $result = $apiInstance->productCreateAttributeGroup($body);
@@ -1822,11 +1822,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerCreateAttributeGroupRequest**](../Model/EntitymanagerCreateAttributeGroupRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerCreateAttributeGroupRequest**](../Model/EntitymanagerCreateAttributeGroupRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerAttributeGroup**](../Model/EntitymanagerAttributeGroup.md)
+[**\OpenAPI\Client\Model\EntitymanagerAttributeGroup**](../Model/EntitymanagerAttributeGroup.md)
 
 ### Authorization
 
@@ -1844,7 +1844,7 @@ try {
 ## `productCreateProduct()`
 
 ```php
-productCreateProduct($body): \GeminiCommerce\Product\Model\ProductCreateProductResponse
+productCreateProduct($body): \OpenAPI\Client\Model\ProductCreateProductResponse
 ```
 
 
@@ -1857,18 +1857,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductCreateProductRequest(); // \GeminiCommerce\Product\Model\ProductCreateProductRequest | The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.
+$body = new \OpenAPI\Client\Model\ProductCreateProductRequest(); // \OpenAPI\Client\Model\ProductCreateProductRequest | The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product.
 
 try {
     $result = $apiInstance->productCreateProduct($body);
@@ -1882,11 +1882,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductCreateProductRequest**](../Model/ProductCreateProductRequest.md)| The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product. | |
+| **body** | [**\OpenAPI\Client\Model\ProductCreateProductRequest**](../Model/ProductCreateProductRequest.md)| The CreateProductRequest message is used to create a new product within the system. It contains various fields that allow specifying the details and attributes of the product. | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductCreateProductResponse**](../Model/ProductCreateProductResponse.md)
+[**\OpenAPI\Client\Model\ProductCreateProductResponse**](../Model/ProductCreateProductResponse.md)
 
 ### Authorization
 
@@ -1904,7 +1904,7 @@ try {
 ## `productCreateProductV2()`
 
 ```php
-productCreateProductV2($body): \GeminiCommerce\Product\Model\ProductCreateProductResponseV2
+productCreateProductV2($body): \OpenAPI\Client\Model\ProductCreateProductResponseV2
 ```
 
 
@@ -1917,18 +1917,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductCreateProductRequestV2(); // \GeminiCommerce\Product\Model\ProductCreateProductRequestV2
+$body = new \OpenAPI\Client\Model\ProductCreateProductRequestV2(); // \OpenAPI\Client\Model\ProductCreateProductRequestV2
 
 try {
     $result = $apiInstance->productCreateProductV2($body);
@@ -1942,11 +1942,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductCreateProductRequestV2**](../Model/ProductCreateProductRequestV2.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductCreateProductRequestV2**](../Model/ProductCreateProductRequestV2.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductCreateProductResponseV2**](../Model/ProductCreateProductResponseV2.md)
+[**\OpenAPI\Client\Model\ProductCreateProductResponseV2**](../Model/ProductCreateProductResponseV2.md)
 
 ### Authorization
 
@@ -1964,7 +1964,7 @@ try {
 ## `productDelete()`
 
 ```php
-productDelete($body): \GeminiCommerce\Product\Model\ProductDeleteResponse
+productDelete($body): \OpenAPI\Client\Model\ProductDeleteResponse
 ```
 
 
@@ -1977,18 +1977,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductDeleteRequest(); // \GeminiCommerce\Product\Model\ProductDeleteRequest
+$body = new \OpenAPI\Client\Model\ProductDeleteRequest(); // \OpenAPI\Client\Model\ProductDeleteRequest
 
 try {
     $result = $apiInstance->productDelete($body);
@@ -2002,11 +2002,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductDeleteRequest**](../Model/ProductDeleteRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductDeleteRequest**](../Model/ProductDeleteRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductDeleteResponse**](../Model/ProductDeleteResponse.md)
+[**\OpenAPI\Client\Model\ProductDeleteResponse**](../Model/ProductDeleteResponse.md)
 
 ### Authorization
 
@@ -2037,18 +2037,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerDeleteAttributeRequest(); // \GeminiCommerce\Product\Model\EntitymanagerDeleteAttributeRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerDeleteAttributeRequest(); // \OpenAPI\Client\Model\EntitymanagerDeleteAttributeRequest
 
 try {
     $result = $apiInstance->productDeleteAttribute($body);
@@ -2062,7 +2062,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerDeleteAttributeRequest**](../Model/EntitymanagerDeleteAttributeRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerDeleteAttributeRequest**](../Model/EntitymanagerDeleteAttributeRequest.md)|  | |
 
 ### Return type
 
@@ -2097,18 +2097,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductDeleteProductRequest(); // \GeminiCommerce\Product\Model\ProductDeleteProductRequest
+$body = new \OpenAPI\Client\Model\ProductDeleteProductRequest(); // \OpenAPI\Client\Model\ProductDeleteProductRequest
 
 try {
     $result = $apiInstance->productDeleteProduct($body);
@@ -2122,7 +2122,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductDeleteProductRequest**](../Model/ProductDeleteProductRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductDeleteProductRequest**](../Model/ProductDeleteProductRequest.md)|  | |
 
 ### Return type
 
@@ -2144,7 +2144,7 @@ try {
 ## `productGetAttributeGroup()`
 
 ```php
-productGetAttributeGroup($body): \GeminiCommerce\Product\Model\EntitymanagerAttributeGroup
+productGetAttributeGroup($body): \OpenAPI\Client\Model\EntitymanagerAttributeGroup
 ```
 
 
@@ -2157,18 +2157,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerGetAttributeGroupRequest(); // \GeminiCommerce\Product\Model\EntitymanagerGetAttributeGroupRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerGetAttributeGroupRequest(); // \OpenAPI\Client\Model\EntitymanagerGetAttributeGroupRequest
 
 try {
     $result = $apiInstance->productGetAttributeGroup($body);
@@ -2182,11 +2182,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerGetAttributeGroupRequest**](../Model/EntitymanagerGetAttributeGroupRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerGetAttributeGroupRequest**](../Model/EntitymanagerGetAttributeGroupRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerAttributeGroup**](../Model/EntitymanagerAttributeGroup.md)
+[**\OpenAPI\Client\Model\EntitymanagerAttributeGroup**](../Model/EntitymanagerAttributeGroup.md)
 
 ### Authorization
 
@@ -2204,7 +2204,7 @@ try {
 ## `productListAttributeGroups()`
 
 ```php
-productListAttributeGroups($body): \GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsResponse
+productListAttributeGroups($body): \OpenAPI\Client\Model\EntitymanagerListAttributeGroupsResponse
 ```
 
 
@@ -2217,18 +2217,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsRequest(); // \GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerListAttributeGroupsRequest(); // \OpenAPI\Client\Model\EntitymanagerListAttributeGroupsRequest
 
 try {
     $result = $apiInstance->productListAttributeGroups($body);
@@ -2242,11 +2242,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsRequest**](../Model/EntitymanagerListAttributeGroupsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerListAttributeGroupsRequest**](../Model/EntitymanagerListAttributeGroupsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerListAttributeGroupsResponse**](../Model/EntitymanagerListAttributeGroupsResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerListAttributeGroupsResponse**](../Model/EntitymanagerListAttributeGroupsResponse.md)
 
 ### Authorization
 
@@ -2264,7 +2264,7 @@ try {
 ## `productUpdateAttribute()`
 
 ```php
-productUpdateAttribute($body): \GeminiCommerce\Product\Model\EntitymanagerAttribute
+productUpdateAttribute($body): \OpenAPI\Client\Model\EntitymanagerAttribute
 ```
 
 
@@ -2277,18 +2277,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeRequest(); // \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerUpdateAttributeRequest(); // \OpenAPI\Client\Model\EntitymanagerUpdateAttributeRequest
 
 try {
     $result = $apiInstance->productUpdateAttribute($body);
@@ -2302,11 +2302,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeRequest**](../Model/EntitymanagerUpdateAttributeRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerUpdateAttributeRequest**](../Model/EntitymanagerUpdateAttributeRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerAttribute**](../Model/EntitymanagerAttribute.md)
+[**\OpenAPI\Client\Model\EntitymanagerAttribute**](../Model/EntitymanagerAttribute.md)
 
 ### Authorization
 
@@ -2324,7 +2324,7 @@ try {
 ## `productUpdateAttributeGroup()`
 
 ```php
-productUpdateAttributeGroup($body): \GeminiCommerce\Product\Model\EntitymanagerAttributeGroup
+productUpdateAttributeGroup($body): \OpenAPI\Client\Model\EntitymanagerAttributeGroup
 ```
 
 
@@ -2337,18 +2337,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeGroupRequest(); // \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeGroupRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerUpdateAttributeGroupRequest(); // \OpenAPI\Client\Model\EntitymanagerUpdateAttributeGroupRequest
 
 try {
     $result = $apiInstance->productUpdateAttributeGroup($body);
@@ -2362,11 +2362,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeGroupRequest**](../Model/EntitymanagerUpdateAttributeGroupRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerUpdateAttributeGroupRequest**](../Model/EntitymanagerUpdateAttributeGroupRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerAttributeGroup**](../Model/EntitymanagerAttributeGroup.md)
+[**\OpenAPI\Client\Model\EntitymanagerAttributeGroup**](../Model/EntitymanagerAttributeGroup.md)
 
 ### Authorization
 
@@ -2384,7 +2384,7 @@ try {
 ## `productUpdateProduct()`
 
 ```php
-productUpdateProduct($body): \GeminiCommerce\Product\Model\ProductUpdateProductResponse
+productUpdateProduct($body): \OpenAPI\Client\Model\ProductUpdateProductResponse
 ```
 
 
@@ -2397,18 +2397,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductUpdateProductRequest(); // \GeminiCommerce\Product\Model\ProductUpdateProductRequest
+$body = new \OpenAPI\Client\Model\ProductUpdateProductRequest(); // \OpenAPI\Client\Model\ProductUpdateProductRequest
 
 try {
     $result = $apiInstance->productUpdateProduct($body);
@@ -2422,11 +2422,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductUpdateProductRequest**](../Model/ProductUpdateProductRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductUpdateProductRequest**](../Model/ProductUpdateProductRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductUpdateProductResponse**](../Model/ProductUpdateProductResponse.md)
+[**\OpenAPI\Client\Model\ProductUpdateProductResponse**](../Model/ProductUpdateProductResponse.md)
 
 ### Authorization
 
@@ -2457,18 +2457,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductUpdateProductRequestV2(); // \GeminiCommerce\Product\Model\ProductUpdateProductRequestV2
+$body = new \OpenAPI\Client\Model\ProductUpdateProductRequestV2(); // \OpenAPI\Client\Model\ProductUpdateProductRequestV2
 
 try {
     $result = $apiInstance->productUpdateProductV2($body);
@@ -2482,7 +2482,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductUpdateProductRequestV2**](../Model/ProductUpdateProductRequestV2.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductUpdateProductRequestV2**](../Model/ProductUpdateProductRequestV2.md)|  | |
 
 ### Return type
 
@@ -2519,18 +2519,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest(); // \GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest
+$body = new \OpenAPI\Client\Model\ProductRemoveMediaGalleryEntryRequest(); // \OpenAPI\Client\Model\ProductRemoveMediaGalleryEntryRequest
 
 try {
     $result = $apiInstance->removeMediaGalleryEntry($body);
@@ -2544,7 +2544,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductRemoveMediaGalleryEntryRequest**](../Model/ProductRemoveMediaGalleryEntryRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductRemoveMediaGalleryEntryRequest**](../Model/ProductRemoveMediaGalleryEntryRequest.md)|  | |
 
 ### Return type
 
@@ -2566,7 +2566,7 @@ try {
 ## `updateAttributeOptions()`
 
 ```php
-updateAttributeOptions($body): \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse
+updateAttributeOptions($body): \OpenAPI\Client\Model\EntitymanagerUpdateAttributeOptionsResponse
 ```
 
 Update Attribute Options
@@ -2579,18 +2579,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest(); // \GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerUpdateAttributeOptionsRequest(); // \OpenAPI\Client\Model\EntitymanagerUpdateAttributeOptionsRequest
 
 try {
     $result = $apiInstance->updateAttributeOptions($body);
@@ -2604,11 +2604,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsRequest**](../Model/EntitymanagerUpdateAttributeOptionsRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerUpdateAttributeOptionsRequest**](../Model/EntitymanagerUpdateAttributeOptionsRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerUpdateAttributeOptionsResponse**](../Model/EntitymanagerUpdateAttributeOptionsResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerUpdateAttributeOptionsResponse**](../Model/EntitymanagerUpdateAttributeOptionsResponse.md)
 
 ### Authorization
 
@@ -2626,7 +2626,7 @@ try {
 ## `updateDataToBeReviewed()`
 
 ```php
-updateDataToBeReviewed($body): \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse
+updateDataToBeReviewed($body): \OpenAPI\Client\Model\ProductGetEnhanceProductDataWithAIStatusResponse
 ```
 
 Get Enhance Product Data With AI Status
@@ -2641,18 +2641,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest(); // \GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest
+$body = new \OpenAPI\Client\Model\ProductGetEnhanceProductDataWithAIStatusRequest(); // \OpenAPI\Client\Model\ProductGetEnhanceProductDataWithAIStatusRequest
 
 try {
     $result = $apiInstance->updateDataToBeReviewed($body);
@@ -2666,11 +2666,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusRequest**](../Model/ProductGetEnhanceProductDataWithAIStatusRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductGetEnhanceProductDataWithAIStatusRequest**](../Model/ProductGetEnhanceProductDataWithAIStatusRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductGetEnhanceProductDataWithAIStatusResponse**](../Model/ProductGetEnhanceProductDataWithAIStatusResponse.md)
+[**\OpenAPI\Client\Model\ProductGetEnhanceProductDataWithAIStatusResponse**](../Model/ProductGetEnhanceProductDataWithAIStatusResponse.md)
 
 ### Authorization
 
@@ -2703,18 +2703,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest(); // \GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest
+$body = new \OpenAPI\Client\Model\ProductUpdateDataToBeReviewedRequest(); // \OpenAPI\Client\Model\ProductUpdateDataToBeReviewedRequest
 
 try {
     $result = $apiInstance->updateDataToBeReviewed_0($body);
@@ -2728,7 +2728,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductUpdateDataToBeReviewedRequest**](../Model/ProductUpdateDataToBeReviewedRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductUpdateDataToBeReviewedRequest**](../Model/ProductUpdateDataToBeReviewedRequest.md)|  | |
 
 ### Return type
 
@@ -2765,18 +2765,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest(); // \GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest
+$body = new \OpenAPI\Client\Model\ProductUpdateMediaGalleryEntryRequest(); // \OpenAPI\Client\Model\ProductUpdateMediaGalleryEntryRequest
 
 try {
     $result = $apiInstance->updateMediaGalleryEntry($body);
@@ -2790,7 +2790,7 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductUpdateMediaGalleryEntryRequest**](../Model/ProductUpdateMediaGalleryEntryRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductUpdateMediaGalleryEntryRequest**](../Model/ProductUpdateMediaGalleryEntryRequest.md)|  | |
 
 ### Return type
 
@@ -2812,7 +2812,7 @@ try {
 ## `updateOptionsList()`
 
 ```php
-updateOptionsList($body): \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse
+updateOptionsList($body): \OpenAPI\Client\Model\EntitymanagerUpdateOptionsListResponse
 ```
 
 Update Options List
@@ -2825,18 +2825,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest(); // \GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest
+$body = new \OpenAPI\Client\Model\EntitymanagerUpdateOptionsListRequest(); // \OpenAPI\Client\Model\EntitymanagerUpdateOptionsListRequest
 
 try {
     $result = $apiInstance->updateOptionsList($body);
@@ -2850,11 +2850,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListRequest**](../Model/EntitymanagerUpdateOptionsListRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\EntitymanagerUpdateOptionsListRequest**](../Model/EntitymanagerUpdateOptionsListRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\EntitymanagerUpdateOptionsListResponse**](../Model/EntitymanagerUpdateOptionsListResponse.md)
+[**\OpenAPI\Client\Model\EntitymanagerUpdateOptionsListResponse**](../Model/EntitymanagerUpdateOptionsListResponse.md)
 
 ### Authorization
 
@@ -2872,7 +2872,7 @@ try {
 ## `updateProductWithAI()`
 
 ```php
-updateProductWithAI($body): \GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse
+updateProductWithAI($body): \OpenAPI\Client\Model\ProductUpdateProductWithAIResponse
 ```
 
 Update Product With AI
@@ -2887,18 +2887,18 @@ require_once(__DIR__ . '/vendor/autoload.php');
 
 
 // Configure API key authorization: Authorization
-$config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
+$config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKey('Authorization', 'YOUR_API_KEY');
 // Uncomment below to setup prefix (e.g. Bearer) for API key, if needed
-// $config = GeminiCommerce\Product\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
+// $config = OpenAPI\Client\Configuration::getDefaultConfiguration()->setApiKeyPrefix('Authorization', 'Bearer');
 
 
-$apiInstance = new GeminiCommerce\Product\Api\ProductApi(
+$apiInstance = new OpenAPI\Client\Api\ProductApi(
     // If you want use custom http client, pass your client which implements `GuzzleHttp\ClientInterface`.
     // This is optional, `GuzzleHttp\Client` will be used as default.
     new GuzzleHttp\Client(),
     $config
 );
-$body = new \GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest(); // \GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest
+$body = new \OpenAPI\Client\Model\ProductUpdateProductWithAIRequest(); // \OpenAPI\Client\Model\ProductUpdateProductWithAIRequest
 
 try {
     $result = $apiInstance->updateProductWithAI($body);
@@ -2912,11 +2912,11 @@ try {
 
 | Name | Type | Description  | Notes |
 | ------------- | ------------- | ------------- | ------------- |
-| **body** | [**\GeminiCommerce\Product\Model\ProductUpdateProductWithAIRequest**](../Model/ProductUpdateProductWithAIRequest.md)|  | |
+| **body** | [**\OpenAPI\Client\Model\ProductUpdateProductWithAIRequest**](../Model/ProductUpdateProductWithAIRequest.md)|  | |
 
 ### Return type
 
-[**\GeminiCommerce\Product\Model\ProductUpdateProductWithAIResponse**](../Model/ProductUpdateProductWithAIResponse.md)
+[**\OpenAPI\Client\Model\ProductUpdateProductWithAIResponse**](../Model/ProductUpdateProductWithAIResponse.md)
 
 ### Authorization
 

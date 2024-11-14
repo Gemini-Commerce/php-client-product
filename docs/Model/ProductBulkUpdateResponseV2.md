@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**product_response**| [**\GeminiCommerce\Product\Model\ProductBulkUpdateResponseV2Response[]**](ProductBulkUpdateResponseV2Response.md) |   | [optional]
+**product_response**| [**\OpenAPI\Client\Model\ProductBulkUpdateResponseV2Response[]**](ProductBulkUpdateResponseV2Response.md) |   | [optional]
 
 
 [[Back to Model list]](../../README.md#models) [[Back to API list]](../../README.md#endpoints) [[Back to README]](../../README.md)

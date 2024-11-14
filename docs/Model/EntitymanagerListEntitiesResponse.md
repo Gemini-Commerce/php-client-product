@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**entities**| [**\GeminiCommerce\Product\Model\EntitymanagerEntity[]**](EntitymanagerEntity.md) |   | [optional]
+**entities**| [**\OpenAPI\Client\Model\EntitymanagerEntity[]**](EntitymanagerEntity.md) |   | [optional]
 **next_page**| **int** |   | [optional]
 
 

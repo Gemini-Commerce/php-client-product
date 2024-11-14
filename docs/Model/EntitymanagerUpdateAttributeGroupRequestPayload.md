@@ -6,7 +6,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**label**| [**\GeminiCommerce\Product\Model\ProductentitymanagerLocalizedText**](ProductentitymanagerLocalizedText.md) |   | [optional]
+**label**| [**\OpenAPI\Client\Model\ProductentitymanagerLocalizedText**](ProductentitymanagerLocalizedText.md) |   | [optional]
 **sort**| **int** |   | [optional]
 **visibility**| **string[]** |   | [optional]
 

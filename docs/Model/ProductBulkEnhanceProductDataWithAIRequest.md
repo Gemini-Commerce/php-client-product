@@ -7,8 +7,8 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **tenant_id**| **string** |   | [optional]
-**enrich**| [**\GeminiCommerce\Product\Model\ProductEnrichAction**](ProductEnrichAction.md) |   | [optional]
-**translate**| [**\GeminiCommerce\Product\Model\ProductTranslateAction**](ProductTranslateAction.md) |   | [optional]
+**enrich**| [**\OpenAPI\Client\Model\ProductEnrichAction**](ProductEnrichAction.md) |   | [optional]
+**translate**| [**\OpenAPI\Client\Model\ProductTranslateAction**](ProductTranslateAction.md) |   | [optional]
 **product_ids**| **string[]** |   | [optional]
 **skip_review**| **bool** |   | [optional]
 
